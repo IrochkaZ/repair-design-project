@@ -1,5 +1,22 @@
-$colorBlue: blue;
+$main-color : #E3B873;
 
-body {
-    color: $colorBlue;
+.header__menu{
+    display: flex;
+    color: Red;
+    padding: 24px 100px 22px 85px;
+    justify-content: space-between;
+    background: #131313;
+}
+
+.header__nav {
+    display: flex;
+    font-family: $font-FuturaBookC;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header-list__item{
+    font-color: 
 }
