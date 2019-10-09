@@ -1,7 +1,6 @@
 $font-FuturaBookC: FuturaBookC;
 $font-FuturaBookC: FuturaDemiC;
-
- * {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -12,150 +11,181 @@ $font-FuturaBookC: FuturaDemiC;
     margin: 0 auto;
 }
 
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
+@mixin max-content {
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -o-max-content;
+    width: -ms-max-content;
+}
+
 @mixin size-color($fontSize, $color, $font-family) {
     font-size: $fontSize;
     color: $color;
     font-family: $font-family;
 }
 
+$link-hover: #ffffff;
 // @mixin button($backgroundColor, $border, $boxShadow){
 //     background-color: $backgroundColor;
 //     border:$border;
 //     box-shadow:$boxShadow;
 // }
-
 $main-color: #E3B873;
-
-@mixin flex($flexDispaly, $justifyContent ){
+@mixin flex($flexDispaly, $justifyContent) {
     display: $flexDispaly;
     justify-content: $justifyContent;
 }
 
-.header__menu {
-    @include flex(flex,space-between );
-    padding: 24px 100px 22px 85px;
-    background: #131313;
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .header__nav {
-
-
-        .header__list {
-            width: 40%;
-            @include flex(flex,space-between );
-
-            .header-list__item{
-                list-style: none;
-                color:white;
+.header {
+    .header__menu {
+        @include flex(flex, space-between);
+        padding: 24px 100px 22px 85px;
+        background: #131313;
+        align-items: center;
+        .header__nav {
+            .header__list {
+                width: 40%;
+                @include flex(flex, space-between);
+                .header-list__item {
+                    list-style: none;
+                    padding-right: 3.063em;
+                    @include size-color(0.875em, #ffffff, 'FuturaBookC');
+                    .header-list__link:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        .header-logo {
+            width: 20%;
+            &__text {
+                @include size-color(0.875em, $main-color, 'FuturaDemiC');
+                text-transform: uppercase
+            }
+            ;
+        }
+        .header__contacts {
+            @include flex(flex, space-between);
+            align-items: center;
+            .header-contacts__telephone {
+                @extend .header-logo__text;
+                padding-right: 2.625em;
+            }
+            .header-contacts__button {
+                cursor: pointer;
+                background: $main-color;
+                box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+                border-radius: 2px;
+                padding: 13px 33px;
+                border-color: $main-color;
+                text-transform: uppercase;
+                @include size-color(0.813em, #ffffff, 'FuturaDemiC')
             }
         }
     }
-    .header-logo{
-        width: 20%;
-        &__text{ @include size-color(14px,$main-color ,'FuturaDemiC');
-                    text-transform: uppercase};
-    }
-
-    .header__contacts{
-        @include flex(flex,space-between );
-        .header-contacts__telephone{
-            @extend .header-logo__text;
+    .header__main {
+        display: flex;
+        .header-vertical {
+            @include flex(flex, center);
+            flex-direction: column;
+            width: 5.76%;
+            background-color: #131313;
+            align-items: center;
+            &__text {
+                transform: rotate(90deg);
+                @include size-color(0.875em, $main-color, 'FuturaDemiC');
+                text-transform: uppercase;
+            }
+            &__link:hover {
+                color: $link-hover;
+            }
+            &__line {
+                transform: rotate(90deg);
+                width: 3.125em;
+                border-color: $main-color;
+                position: relative;
+                top: 74px;
+            }
         }
-
-        .header-contacts__button{
-            background: $main-color;
-            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-            border-radius: 2px;
-            padding:13px 33px;
-            border-color: $main-color;
+        .header-info {
+            flex-grow: 1;
+            background-image: url(assets/img/header/header_background.jpg);
+            width: 1358px;
+            height: 707px;
+            background-size: cover;
+            &__content {
+                padding: 12.125em 0 0 3.750em;
+                width: 50%;
+            }
+            &__heading {
+                line-height: 53px;
+                text-transform: uppercase;
+                @include size-color(2.5em, #ffffff, 'Yeseva One');
+                span {
+                    color: $main-color;
+                }
+            }
+            &__text {
+                margin-top: 2.125em;
+                margin-bottom: 3.125em;
+                @include size-color(1.375em, #ffffff, 'FuturaBookC');
+                line-height: 30px;
+                width: 72%;
+            }
+            &__button-left {
+                cursor: pointer;
+                background-color: transparent;
+                box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+                border-radius: 2px;
+                padding: 1.250em 2.531em;
+                border-color: #ffffff;
+                text-transform: uppercase;
+                @include size-color(0.813em, #ffffff, 'FuturaDemiC');
+                &:hover {
+                    background-color: $main-color;
+                    border-color: $main-color;
+                }
+            }
+            &__button-right {
+                @extend .header-info__button-left;
+                margin-left: 1.250em;
+            }
+        }
+        .header-scroll {
+            @include max-content;
+            background-color: inherit;
+            position: relative;
+            top: 310px;
+            left: 99px;
+            &__text {
+                @include size-color(1.188em, #ffffff, 'Yeseva One');
+                text-transform: uppercase;
+                padding-right: 1.125em;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+            &__down {
+                padding: 33px 45px 46px;
+                @include flex(flex, center);
+                align-items: center
+            }
+            &__link {
+                &:hover {
+                    color: #ffffff;
+                }
+            }
         }
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
