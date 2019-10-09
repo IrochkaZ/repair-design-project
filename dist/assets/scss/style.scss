@@ -1,21 +1,7 @@
-//@import "./header.scss";
+$font-FuturaBookC: FuturaBookC;
+$font-FuturaBookC: FuturaDemiC;
 
-/* @font-face {
-    font-family: FuturaBookC;
-    src: url("../fonts/FuturaBookC.ttf");
-    src: url("../fonts/FuturaBookC.eot");
-    src: url("../fonts/FuturaBookC.woff2");
-}
-
-@font-face {
-    font-family: FuturaDemiC;
-    src: url("../fonts/FuturaDemiC.ttf");
-} */
-
-//$font-FuturaBookC: FuturaBookC;
-//$font-FuturaBookC: FuturaDemiC;
-
-/* * {
+ * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -26,33 +12,150 @@
     margin: 0 auto;
 }
 
-// header
-$main-color: #E3B873;
-
 @mixin size-color($fontSize, $color, $font-family) {
     font-size: $fontSize;
-    background-color: $color;
+    color: $color;
     font-family: $font-family;
 }
 
+// @mixin button($backgroundColor, $border, $boxShadow){
+//     background-color: $backgroundColor;
+//     border:$border;
+//     box-shadow:$boxShadow;
+// }
+
+$main-color: #E3B873;
+
+@mixin flex($flexDispaly, $justifyContent ){
+    display: $flexDispaly;
+    justify-content: $justifyContent;
+}
+
 .header__menu {
-    display: flex;
-    color: Red;
+    @include flex(flex,space-between );
     padding: 24px 100px 22px 85px;
-    justify-content: space-between;
     background: #131313;
+
+    .header__nav {
+
+
+        .header__list {
+            width: 40%;
+            @include flex(flex,space-between );
+
+            .header-list__item{
+                list-style: none;
+                color:white;
+            }
+        }
+    }
+    .header-logo{
+        width: 20%;
+        &__text{ @include size-color(14px,$main-color ,'FuturaDemiC');
+                    text-transform: uppercase};
+    }
+
+    .header__contacts{
+        @include flex(flex,space-between );
+        .header-contacts__telephone{
+            @extend .header-logo__text;
+        }
+
+        .header-contacts__button{
+            background: $main-color;
+            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+            border-radius: 2px;
+            padding:13px 33px;
+            border-color: $main-color;
+        }
+    }
+
 }
 
-.header__nav {
-    display: flex;
-    font-family: $font-FuturaBookC;
-}
 
-.header__list {
-    display: flex;
-} */
 
-.header__list {
-    display: flex;
-    font-family: 'FuturaBookC';
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,53 +1,48 @@
-/* @font-face {
-    font-family: FuturaBookC;
-    src: url("../fonts/FuturaBookC.ttf");
-    src: url("../fonts/FuturaBookC.eot");
-    src: url("../fonts/FuturaBookC.woff2");
-}
-
-@font-face {
-    font-family: FuturaDemiC;
-    src: url("../fonts/FuturaDemiC.ttf");
-} */
-/* * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .wrapper {
-    width: 1440px;
-    margin: 0 auto;
-}
-
-// header
-$main-color: #E3B873;
-
-@mixin size-color($fontSize, $color, $font-family) {
-    font-size: $fontSize;
-    background-color: $color;
-    font-family: $font-family;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .header__menu {
-    display: flex;
-    color: Red;
-    padding: 24px 100px 22px 85px;
-    justify-content: space-between;
-    background: #131313;
-}
-
-.header__nav {
-    display: flex;
-    font-family: $font-FuturaBookC;
-}
-
-.header__list {
-    display: flex;
-} */
-.header__list {
   display: flex;
-  font-family: "FuturaBookC";
+  justify-content: space-between;
+  padding: 24px 100px 22px 85px;
+  background: #131313;
+}
+.header__menu .header__nav .header__list {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.header__menu .header__nav .header__list .header-list__item {
+  list-style: none;
+  color: white;
+}
+.header__menu .header-logo {
+  width: 20%;
+}
+.header__menu .header-logo__text, .header__menu .header__contacts .header-contacts__telephone {
+  font-size: 14px;
+  color: #E3B873;
+  font-family: "FuturaDemiC";
+  text-transform: uppercase;
+}
+.header__menu .header__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.header__menu .header__contacts .header-contacts__button {
+  background: #E3B873;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border-radius: 2px;
+  padding: 13px 33px;
+  border-color: #E3B873;
 }
 
 /*# sourceMappingURL=style.css.map */

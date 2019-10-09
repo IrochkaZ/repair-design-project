@@ -1,5 +1,11 @@
 $main-color: #E3B873;
 
+@mixin size-color($fontSize, $color, $fontFamily) {
+    font-size: $fontSize;
+    background-color: $color;
+    font-family: $fontFamily;
+}
+
 .header__menu {
     display: flex;
     color: Red;
@@ -9,10 +15,29 @@ $main-color: #E3B873;
 }
 
 .header__nav {
+    width: 80%;
     display: flex;
-    font-family: $font-FuturaBookC;
+    justify-content: space-between;
 }
 
 .header__list {
+    width: 60%;
     display: flex;
+    justify-content: space-between;
 }
+
+.header-logo{
+    width: 20%;
+    &__text{ @include size-color(14px,$main-color ,'FuturaDemiC');
+
+
+    }
+}
+
+.header-list__item{
+    list-style: none;
+    color:white;
+}
+
+
+
