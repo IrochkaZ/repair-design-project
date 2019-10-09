@@ -1,5 +1,3 @@
-$font-FuturaBookC: FuturaBookC;
-$font-FuturaBookC: FuturaDemiC;
 * {
     box-sizing: border-box;
     padding: 0;
@@ -37,6 +35,7 @@ $link-hover: #ffffff;
 //     box-shadow:$boxShadow;
 // }
 $main-color: #E3B873;
+$backgroundColor: #131313;
 @mixin flex($flexDispaly, $justifyContent) {
     display: $flexDispaly;
     justify-content: $justifyContent;
@@ -51,7 +50,7 @@ a {
     .header__menu {
         @include flex(flex, space-between);
         padding: 24px 100px 22px 85px;
-        background: #131313;
+        background: $backgroundColor;
         align-items: center;
         .header__nav {
             .header__list {
@@ -100,7 +99,7 @@ a {
             @include flex(flex, center);
             flex-direction: column;
             width: 5.76%;
-            background-color: #131313;
+            background-color: $backgroundColor;
             align-items: center;
             &__text {
                 transform: rotate(90deg);
