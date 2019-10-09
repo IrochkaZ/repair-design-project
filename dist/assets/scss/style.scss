@@ -1,37 +1,41 @@
-@import "./header.scss";
-@font-face {
+//@import "./header.scss";
+
+/* @font-face {
     font-family: FuturaBookC;
-    src: url('../fonts/FuturaBookC.ttf');
-    src: url('../fonts/FuturaBookC.eot');
-    src: url('../fonts/FuturaBookC.woff2');
+    src: url("../fonts/FuturaBookC.ttf");
+    src: url("../fonts/FuturaBookC.eot");
+    src: url("../fonts/FuturaBookC.woff2");
 }
+
 @font-face {
     font-family: FuturaDemiC;
-    src: url('../fonts/FuturaDemiC.ttf');
-}
+    src: url("../fonts/FuturaDemiC.ttf");
+} */
 
-$font-FuturaBookC: FuturaBookC;
-$font-FuturaBookC: FuturaDemiC;
+//$font-FuturaBookC: FuturaBookC;
+//$font-FuturaBookC: FuturaDemiC;
 
-*{
+/* * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
 .wrapper {
     width: 1440px;
     margin: 0 auto;
 }
+
 // header
-$main-color : #E3B873;
+$main-color: #E3B873;
 
 @mixin size-color($fontSize, $color, $font-family) {
     font-size: $fontSize;
     background-color: $color;
     font-family: $font-family;
-    }
+}
 
-.header__menu{
+.header__menu {
     display: flex;
     color: Red;
     padding: 24px 100px 22px 85px;
@@ -46,8 +50,9 @@ $main-color : #E3B873;
 
 .header__list {
     display: flex;
-}
+} */
 
-.header-list__item{
-    font-color: 
+.header__list {
+    display: flex;
+    font-family: 'FuturaBookC';
 }
