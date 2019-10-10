@@ -178,4 +178,109 @@ a {
   color: #ffffff;
 }
 
+.completed-project {
+  display: flex;
+  padding-top: 110px;
+  background-color: #131313;
+}
+.completed-project__slider {
+  display: flex;
+  flex-direction: column;
+}
+.completed-project__cities {
+  display: flex;
+  margin-bottom: 45px;
+}
+.completed-project__info {
+  flex-direction: column;
+  display: flex;
+  width: 40%;
+  padding-left: 6.25rem;
+  margin-top: 58px;
+}
+.completed-project__gallery {
+  display: flex;
+  overflow: hidden;
+}
+.completed-project__header {
+  font-size: 1.688em;
+  color: #E3B873;
+  font-family: " Yeseva One";
+  line-height: 2.3125rem;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+.completed-project__header-block {
+  display: flex;
+}
+.completed-project__article {
+  font-size: 1.125em;
+  color: #ffffff;
+  font-family: "FuturaBookC";
+  line-height: 1.8125rem;
+  width: 87%;
+  padding: 2.25rem 0 3.5rem;
+}
+.completed-project__line {
+  position: relative;
+  width: 5.75rem;
+  top: 3.25rem;
+  left: 0.4375rem;
+  border-color: #E3B873;
+}
+
+.completed-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.completed-text__row {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 48px;
+}
+
+.completed-text__block {
+  width: 37%;
+}
+
+.completed-text__article {
+  font-size: 15px;
+  color: #FFFFFF;
+  font-family: "FuturaBookC";
+  width: 60%;
+  line-height: 20px;
+}
+
+.completed-text__header {
+  font-size: 18px;
+  color: #E3B873;
+  font-family: "Yeseva One";
+  line-height: 25px;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+  font-weight: normal;
+}
+
+.cities-city {
+  margin-right: 60px;
+  justify-content: space-between;
+  list-style: none;
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+.cities-city :hover {
+  color: #E3B873;
+  text-decoration: underline;
+}
+
+.completed-project__gallery :nth-child(1) {
+  margin-right: 46px;
+}
+
 /*# sourceMappingURL=style.css.map */

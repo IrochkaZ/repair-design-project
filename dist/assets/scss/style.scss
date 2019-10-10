@@ -188,3 +188,103 @@ a {
         }
     }
 }
+
+// completed__project completed-project
+
+.completed-project{
+    display: flex;
+    padding-top: 110px;
+    background-color: $backgroundColor;
+    &__slider {
+        display: flex;
+        flex-direction: column;
+    }
+        &__cities{
+            display: flex;
+            margin-bottom: 45px;
+        }
+        &__info{
+            flex-direction: column;
+            display: flex;
+            width: 40%;
+            padding-left:6.25rem;
+            margin-top: 58px;
+        }
+        &__gallery{
+            display: flex;
+            overflow: hidden;
+        }
+        &__header{
+            @include size-color(1.688em, $main-color, ' Yeseva One');
+            line-height: 2.3125rem;
+            letter-spacing: -0.07em;
+            text-transform: uppercase;
+            &-block{
+                display: flex;
+            }
+        }
+        &__article{
+            @include size-color(1.125em, #ffffff, 'FuturaBookC');
+            line-height: 1.8125rem;
+            width: 87%;
+            padding: 2.25rem 0 3.5rem;
+        }
+        &__line{
+            position: relative;
+            width: 5.75rem;
+            top: 3.25rem;
+            left: 0.4375rem;
+            border-color: $main-color;
+        }
+    }
+
+.completed-text {
+        display: flex;
+        flex-direction: column;
+    }
+    .completed-text__row {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 48px;
+    }
+
+    .completed-text__block {
+        width: 37%;
+    }
+
+    .completed-text__article{
+        @include size-color(15px,#FFFFFF, 'FuturaBookC');
+        width: 60%;
+        line-height: 20px;
+    }
+
+    .completed-text__header{
+        @include size-color(18px,$main-color, 'Yeseva One');
+        line-height: 25px;
+        text-transform: uppercase;
+        padding-bottom: 16px;
+        font-weight: normal;
+    }
+
+
+    .cities-city {
+        margin-right: 60px;
+        justify-content: space-between;
+        list-style: none;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+
+color: rgba(255, 255, 255, 0.3);
+:hover{
+    color: $main-color;
+    text-decoration: underline;
+}
+}
+
+.completed-project__gallery :nth-child(1){
+        margin-right: 46px;
+}
