@@ -1,3 +1,4 @@
+@import "../normalize.css-master/normalize.css";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -186,6 +187,8 @@ a {
 .completed-project__slider {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  width: 60%;
 }
 .completed-project__cities {
   display: flex;
@@ -200,7 +203,9 @@ a {
 }
 .completed-project__gallery {
   display: flex;
-  overflow: hidden;
+}
+.completed-project__gallery .gallery-room1 {
+  margin-right: 2.875rem;
 }
 .completed-project__header {
   font-size: 1.688em;
@@ -233,54 +238,80 @@ a {
   display: flex;
   flex-direction: column;
 }
-
 .completed-text__row {
   display: flex;
   flex-direction: row;
-  padding-bottom: 48px;
+  padding-bottom: 3rem;
 }
-
 .completed-text__block {
   width: 37%;
 }
-
 .completed-text__article {
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: #FFFFFF;
   font-family: "FuturaBookC";
   width: 60%;
-  line-height: 20px;
+  line-height: 1.25rem;
 }
-
 .completed-text__header {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #E3B873;
   font-family: "Yeseva One";
-  line-height: 25px;
+  line-height: 1.5625rem;
   text-transform: uppercase;
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   font-weight: normal;
 }
 
 .cities-city {
-  margin-right: 60px;
+  margin-right: 3.75rem;
   justify-content: space-between;
   list-style: none;
   font-family: Yeseva One;
-  font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.3);
 }
-.cities-city :hover {
+.cities-city:hover {
   color: #E3B873;
   text-decoration: underline;
 }
 
-.completed-project__gallery :nth-child(1) {
-  margin-right: 46px;
+.completed-project__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.completed__project-arrow {
+  width: 41.46px;
+  font-size: 2.375rem;
+  color: #ffffff;
+}
+.completed__project-arrow:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.arrow-list__item {
+  font-size: 1.875rem;
+}
+
+.arrow-list__item {
+  margin-right: 0.25rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 2.5rem;
+}
+.arrow-list__item:hover {
+  color: #ffffff;
+}
+
+.arrow--back {
+  margin-right: 1.875rem;
+}
+
+.arrow--next {
+  margin-left: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
