@@ -14,6 +14,11 @@ button,
 button:active,
 button:focus {
   outline: none;
+  cursor: pointer;
+}
+
+input {
+  cursor: pointer;
 }
 
 a {
@@ -61,7 +66,6 @@ a {
   padding-right: 2.625em;
 }
 .header .header__menu .header__contacts .header-contacts__button {
-  cursor: pointer;
   background: #E3B873;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   border-radius: 2px;
@@ -131,7 +135,6 @@ a {
   width: 72%;
 }
 .header .header__main .header-info__button-left, .header .header__main .header-info__button-right {
-  cursor: pointer;
   background-color: transparent;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
   border-radius: 2px;
@@ -203,6 +206,7 @@ a {
 }
 .completed-project__gallery {
   display: flex;
+  height: 482px;
 }
 .completed-project__gallery .gallery-room1 {
   margin-right: 2.875rem;
@@ -211,6 +215,7 @@ a {
   position: sticky;
   outline: none;
   right: 1.625rem;
+  margin: auto;
 }
 .completed-project__header {
   font-size: 1.688em;
@@ -323,7 +328,7 @@ h2.online-control__name {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding-top: 81px;
+  padding-top: 63px;
 }
 
 .online-control__black {
@@ -336,7 +341,7 @@ h2.online-control__name {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 255px;
+  padding-bottom: 256px;
 }
 
 .online-control__logo {
@@ -355,10 +360,12 @@ h2.online-control__name {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 50%;
+  width: 55%;
 }
 
 .online-control__article {
+  margin-left: 56px;
+  width: 681px;
   font-family: FuturaBookC;
   font-size: 20px;
   line-height: 34px;
@@ -384,11 +391,13 @@ form.form__wrapper {
 }
 
 .online-control__form {
-  margin: 0 auto;
+  margin: 80px auto;
 }
 
 label.check-form {
   align-self: center;
+  align-self: center;
+  margin-top: 35px;
 }
 
 .form__paragraph {
@@ -398,11 +407,10 @@ label.check-form {
   color: rgba(54, 54, 54, 0.5);
 }
 
-input:not([type=checkbox]) {
+.online__control-name input:not([type=checkbox]) {
   width: 230px;
   padding: 8px 0;
   font-size: 18px;
-  color: #363636;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
 }
@@ -421,9 +429,101 @@ input:not([type=checkbox]) {
   font-family: "FuturaDemic";
 }
 
-input[type=checkbox]:not(:checked) {
+.online__control-name input::placeholder {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+.online__control-name :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+.online__control-name ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+
+p.checkbox__text {
+  font-family: FuturaBookC;
+  font-size: 16px;
+  line-height: 22px;
+  color: #181818;
+}
+
+input.submit {
+  top: 8px;
+  width: 200px;
+  position: relative;
+  bottom: 2px;
+}
+
+input[type=text] {
+  margin-right: 62px;
+}
+
+input[type=tel] {
+  margin-right: 49px;
+}
+
+.check-form {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  user-select: none;
+}
+
+.check-form input {
   position: absolute;
-  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+}
+
+.check-form:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.check-form input:checked ~ .checkmark {
+  background-color: #E3B873;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check-form input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check-form .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 2px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=style.css.map */
