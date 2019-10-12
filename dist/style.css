@@ -319,165 +319,161 @@ a {
   margin-left: 1.25rem;
 }
 
-h2.online-control__name {
+.online-control__video iframe {
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+}
+.online-control__name {
+  font-size: 20px;
+  color: #ffffff;
   font-family: Yeseva One;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 28px;
+  line-height: 1.75rem;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
-  padding-top: 63px;
+  padding-top: 3.9375rem;
 }
-
 .online-control__black {
   background-color: inherit;
   background-color: #131313;
 }
-
 .online-control__header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 256px;
+  padding-bottom: 16rem;
 }
-
 .online-control__logo {
   color: #E3B873;
-  font-size: 30px;
-  padding-top: 10px;
+  font-size: 1.875rem;
+  padding-top: 0.625rem;
 }
-
 .online-control__video {
   position: relative;
-  bottom: 152px;
-  left: 440px;
+  bottom: 9.5rem;
+  left: 27.5rem;
 }
-
 .online-control__white {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   width: 55%;
 }
-
 .online-control__article {
-  margin-left: 56px;
-  width: 681px;
+  font-size: 1.25rem;
+  color: #363636;
   font-family: FuturaBookC;
-  font-size: 20px;
+  margin-left: 3.5rem;
+  width: 42.5625rem;
   line-height: 34px;
   text-align: center;
-  color: #363636;
 }
 .online-control__article::before {
   content: "";
   display: block;
-  width: 55px;
-  height: 2px;
+  width: 3.4375rem;
+  height: 0.125rem;
   background-color: #E3B873;
-  margin: -47px auto 28px;
+  margin: -2.9375rem auto 1.75rem;
 }
-
 .online-control__form {
   display: flex;
   flex-direction: column;
 }
-
-form.form__wrapper {
-  display: flex;
-}
-
 .online-control__form {
   margin: 80px auto;
 }
 
-label.check-form {
+.online__control-name input:not([type=checkbox]) {
+  width: 14.375rem;
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  border: none;
+  border-bottom: 0.0625rem solid rgba(54, 54, 54, 0.3);
+}
+
+.form__wrapper {
+  display: flex;
+}
+
+.check-form {
   align-self: center;
   align-self: center;
-  margin-top: 35px;
+  margin-top: 2.1875rem;
 }
 
 .form__paragraph {
-  font-family: FuturaBookC;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 0.9375rem;
   color: rgba(54, 54, 54, 0.5);
+  font-family: FuturaBookC;
+  line-height: 1.25rem;
 }
 
-.online__control-name input:not([type=checkbox]) {
-  width: 230px;
-  padding: 8px 0;
-  font-size: 18px;
-  border: none;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-}
-
-.submit {
-  width: 200px;
-  height: 50px;
-  font-size: 15px;
+.online__control .submit {
+  font-size: 0.9375rem;
   color: #ffffff;
-  border: 2px solid #E3B873;
+  font-family: FuturaDemic;
+  top: 0.5rem;
+  width: 12.5rem;
+  position: relative;
+  bottom: 0.125rem;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0.125rem solid #E3B873;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #E3B873;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-  border-radius: 2px;
-  font-family: "FuturaDemic";
+  border-radius: 0.125rem;
 }
-
-.online__control-name input::placeholder {
-  font-family: FuturaBookC;
-  font-size: 18px;
-  line-height: 24px;
+.online__control .submit:hover {
+  opacity: 0.8;
+  box-shadow: 0px 0.3125rem 0.9375rem rgba(116, 88, 44, 0.3);
+}
+.online__control-name ::-webkit-input-placeholder {
+  font-size: 1.125rem;
   color: #363636;
+  font-family: FuturaBookC;
+  line-height: 1.5rem;
+}
+.online__control-name :-moz-placeholder {
+  font-size: 1.125rem;
+  color: #363636;
+  font-family: FuturaBookC;
+  line-height: 1.5rem;
+}
+.online__control-name ::-moz-placeholder {
+  font-size: 1.125rem;
+  color: #363636;
+  font-family: FuturaBookC;
+  line-height: 1.5rem;
 }
 .online__control-name :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  font-family: FuturaBookC;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
   color: #363636;
-}
-.online__control-name ::-ms-input-placeholder {
-  /* Microsoft Edge */
   font-family: FuturaBookC;
-  font-size: 18px;
-  line-height: 24px;
-  color: #363636;
+  line-height: 1.5rem;
 }
-
-p.checkbox__text {
-  font-family: FuturaBookC;
-  font-size: 16px;
-  line-height: 22px;
+.online__control-name input[type=text] {
+  margin-right: 3.875rem;
+}
+.online__control-name input[type=tel] {
+  margin-right: 3.0625rem;
+}
+.online__control .checkbox__text {
+  font-size: 1rem;
   color: #181818;
-}
-
-input.submit {
-  top: 8px;
-  width: 200px;
-  position: relative;
-  bottom: 2px;
-}
-
-input[type=text] {
-  margin-right: 62px;
-}
-
-input[type=tel] {
-  margin-right: 49px;
+  font-family: FuturaBookC;
+  line-height: 1.375rem;
 }
 
 .check-form {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  font-size: 22px;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
   user-select: none;
 }
 
@@ -487,43 +483,45 @@ input[type=tel] {
   height: 0;
   width: 0;
 }
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 18px;
-  width: 18px;
-}
-
-.check-form:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
 .check-form input:checked ~ .checkmark {
   background-color: #E3B873;
 }
-
-.checkmark:after {
+.check-form input:checked ~ .checkmark:after {
+  display: block;
+  left: 0.4375rem;
+  top: 0.125rem;
+  width: 0.125rem;
+  height: 0.4375rem;
+  border: solid white;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.check-form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.125rem;
+  width: 1.125rem;
+}
+.check-form .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
-.check-form input:checked ~ .checkmark:after {
-  display: block;
+.check-form:hover input ~ .checkmark {
+  background-color: #ccc;
 }
 
-.check-form .checkmark:after {
-  left: 7px;
-  top: 2px;
-  width: 2px;
-  height: 7px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.types_of_repair__columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.types_of_repair__header-block {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,6 +34,21 @@
                 font-family: $font-family;
             }
             
+            @mixin placeholder {
+                 ::-webkit-input-placeholder {
+                    @content
+                }
+                 :-moz-placeholder {
+                    @content
+                }
+                 ::-moz-placeholder {
+                    @content
+                }
+                 :-ms-input-placeholder {
+                    @content
+                }
+            }
+            
             $link-hover: #ffffff;
             @mixin border-radius($radius) {
                 -webkit-border-radius: $radius;
@@ -325,211 +340,185 @@
             }
             
             // online__control
-            h2.online-control__name {
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 20px;
-                line-height: 28px;
-                text-align: center;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                padding-top: 63px;
-            }
-            
-            .online-control__black {
-                background-color: inherit;
-                background-color: #131313;
-            }
-            
-            .online-control__header {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-                padding-bottom: 256px;
-            }
-            
-            .online-control__logo {
-                color: #E3B873;
-                font-size: 30px;
-                padding-top: 10px;
-            }
-            
-            .online-control__video {
-                position: relative;
-                bottom: 152px;
-                left: 440px;
-            }
-            
-            .online-control__white {
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 auto;
-                width: 55%;
-            }
-            
-            .online-control__article {
-                margin-left: 56px;
-                width: 681px;
-                font-family: FuturaBookC;
-                font-size: 20px;
-                line-height: 34px;
-                text-align: center;
-                color: #363636;
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 55px;
-                    height: 2px;
-                    background-color: #E3B873;
-                    margin: -47px auto 28px;
+            .online-control {
+                &__video iframe {
+                    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
                 }
-            }
-            
-            .online-control__form {
-                display: flex;
-                flex-direction: column;
-            }
-            
-            form.form__wrapper {
-                display: flex;
-            }
-            
-            .online-control__form {
-                margin: 80px auto;
-            }
-            
-            label.check-form {
-                align-self: center;
-                align-self: center;
-                margin-top: 35px;
-            }
-            
-            .form__paragraph {
-                font-family: FuturaBookC;
-                font-size: 15px;
-                line-height: 20px;
-                color: rgba(54, 54, 54, 0.5);
+                &__name {
+                    @include size-color(20px, #ffffff, Yeseva One);
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 1.75rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding-top: 3.9375rem;
+                }
+                &__black {
+                    background-color: inherit;
+                    background-color: #131313;
+                }
+                &__header {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 16rem;
+                }
+                &__logo {
+                    color: $main-color;
+                    font-size: 1.875rem;
+                    padding-top: 0.625rem;
+                }
+                &__video {
+                    position: relative;
+                    bottom: 9.5rem;
+                    left: 27.5rem;
+                }
+                &__white {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 auto;
+                    width: 55%;
+                }
+                &__article {
+                    @include size-color(1.25rem, #363636, FuturaBookC);
+                    margin-left: 3.5rem;
+                    width: 42.5625rem;
+                    line-height: 34px;
+                    text-align: center;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 3.4375rem;
+                        height: 0.125rem;
+                        background-color: $main-color;
+                        margin: -2.9375rem auto 1.75rem;
+                    }
+                }
+                &__form {
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__form {
+                    margin: 80px auto;
+                }
             }
             
             .online__control-name input:not([type="checkbox"]) {
-                width: 230px;
-                padding: 8px 0;
-                font-size: 18px;
+                width: 14.375rem;
+                padding: 0.5rem 0;
+                font-size: 1.125rem;
                 border: none;
-                border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+                border-bottom: 0.0625rem solid rgba(54, 54, 54, 0.3);
             }
             
-            .submit {
-                width: 200px;
-                height: 50px;
-                font-size: 15px;
-                color: #ffffff;
-                border: 2px solid #E3B873;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                background-color: #E3B873;
-                box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-                border-radius: 2px;
-                font-family: "FuturaDemic";
+            .form__wrapper {
+                display: flex;
             }
             
-            .online__control-name {
-                input::placeholder {
-                    font-family: FuturaBookC;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: #363636;
+            .check-form {
+                align-self: center;
+                align-self: center;
+                margin-top: 2.1875rem;
+            }
+            
+            .form__paragraph {
+                @include size-color(0.9375rem, rgba(54, 54, 54, 0.5), FuturaBookC);
+                line-height: 1.25rem;
+            }
+            
+            .online__control {
+                .submit {
+                    @include size-color(0.9375rem, #ffffff, FuturaDemic);
+                    top: 0.5rem;
+                    width: 12.5rem;
+                    position: relative;
+                    bottom: 0.125rem;
+                    width: 12.5rem;
+                    height: 3.125rem;
+                    border: 0.125rem solid $main-color;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    background-color: $main-color;
+                    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+                    border-radius: 0.125rem;
+                    &:hover {
+                        opacity: 0.8;
+                        box-shadow: 0px 0.3125rem 0.9375rem rgba(116, 88, 44, 0.3);
+                    }
                 }
-                 :-ms-input-placeholder {
-                    /* Internet Explorer 10-11 */
-                    font-family: FuturaBookC;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: #363636;
+                &-name {
+                    @include placeholder {
+                        @include size-color(1.125rem, #363636, FuturaBookC);
+                        line-height: 1.5rem;
+                    }
+                    input[type="text"] {
+                        margin-right: 3.875rem;
+                    }
+                    input[type="tel"] {
+                        margin-right: 3.0625rem;
+                    }
                 }
-                 ::-ms-input-placeholder {
-                    /* Microsoft Edge */
-                    font-family: FuturaBookC;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: #363636;
+                .checkbox__text {
+                    @include size-color(1rem, #181818, FuturaBookC);
+                    line-height: 1.375rem;
                 }
-            }
-            
-            p.checkbox__text {
-                font-family: FuturaBookC;
-                font-size: 16px;
-                line-height: 22px;
-                color: #181818;
-            }
-            
-            input.submit {
-                top: 8px;
-                width: 200px;
-                position: relative;
-                bottom: 2px;
-            }
-            
-            input[type="text"] {
-                margin-right: 62px;
-            }
-            
-            input[type="tel"] {
-                margin-right: 49px;
             }
             
             .check-form {
                 display: block;
                 position: relative;
-                padding-left: 35px;
-                margin-bottom: 12px;
-                font-size: 22px;
+                padding-left: 2.1875rem;
+                margin-bottom: 0.75rem;
+                font-size: 1.375rem;
                 user-select: none;
             }
             
-            .check-form input {
-                position: absolute;
-                opacity: 0;
-                height: 0;
-                width: 0;
+            .check-form {
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    height: 0;
+                    width: 0;
+                    &:checked~.checkmark {
+                        background-color: $main-color;
+                        &:after {
+                            display: block;
+                            left: 0.4375rem;
+                            top: 0.125rem;
+                            width: 0.125rem;
+                            height: 0.4375rem;
+                            border: solid white;
+                            border-width: 0 0.1875rem 0.1875rem 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 1.125rem;
+                    width: 1.125rem;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                }
+                &:hover input~.checkmark {
+                    background-color: #ccc;
+                }
             }
             
-            .checkmark {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 18px;
-                width: 18px;
+            .types_of_repair__columns {
+                display: flex;
+                justify-content: space-around;
             }
             
-            .check-form:hover input~.checkmark {
-                background-color: #ccc;
-            }
-            
-            .check-form input:checked~.checkmark {
-                background-color: $main-color;
-            }
-            
-            .checkmark:after {
-                content: "";
-                position: absolute;
-                display: none;
-            }
-            
-            .check-form input:checked~.checkmark:after {
-                display: block;
-            }
-            
-            .check-form .checkmark:after {
-                left: 7px;
-                top: 2px;
-                width: 2px;
-                height: 7px;
-                border: solid white;
-                border-width: 0 3px 3px 0;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
+            .types_of_repair__header-block {
+                display: flex;
+                justify-content: center;
             }
