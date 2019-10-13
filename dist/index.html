@@ -224,7 +224,7 @@
                 </div>
 
             </section>
-
+            <!-- request -->
             <section class="request">
                 <div class="request__elipse">
                     <div class="ellipse">
@@ -252,30 +252,33 @@
                     <div class="request__form-main">
                         <form action="#" class="form-conrol">
                             <p class="form-title">Leave a request for free <br> departure of the measurer</p>
-                            <div class="form-section-control__item">
-                                <p class="input-title">Name</p>
-                                <input type="text" name="name" placeholder="What is your name:" pattern="[A-Za-z]{3,40}">
-                            </div>
-                            <div class="form-section-control__item">
-                                <p class="input-title">Phone</p>
-                                <input type="tel" name="tel" pattern="[0-9]{6,}" placeholder="Your phone number:">
-                            </div>
-                            <div class="form-section-control__item">
-                                <p class="input-title">Email</p>
-                                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your email:">
+                            <div class="request__inputs">
+                                <div class="form-section-control__item">
+                                    <p class="form__paragraph">Name</p>
+                                    <input type="text" name="name" placeholder="What is your name:" pattern="[A-Za-z]{3,40}">
+                                </div>
+                                <div class="form-section-control__item">
+                                    <p class="form__paragraph">Phone</p>
+                                    <input type="tel" name="tel" pattern="[0-9]{6,}" placeholder="Your phone number:">
+                                </div>
+                                <div class="form-section-control__item">
+                                    <p class="form__paragraph">Email</p>
+                                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your email:">
+                                </div>
                             </div>
                             <label class="check-form">
                                 <input type="checkbox" checked="">
+                                <span class="checkmark"></span>
                                 <p class="checkbox__text">I agree to the processing of personal data</p>
                             </label>
                             <div class="button-wrapper">
-                                <input type="submit" value="Call the measurer" class="button">
+                                <input type="submit" value="Call the measurer" class="submit">
                             </div>
                         </form>
                     </div>
                     <div class="saving">
                         <div class="saning__icon">
-                            <span class="icon-pig"></span>
+                            <img src="./assets/img/main/pig.svg" alt="pig">
                         </div>
                         <p class="saving__text">
                             Help save 10 - 20% of the <br>cost of materials

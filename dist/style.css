@@ -26,10 +26,38 @@ button:focus:hover {
 input {
   cursor: pointer;
 }
+input:hover {
+  opacity: 0.8;
+}
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.checkbox__text {
+  font-size: 1rem;
+  color: #181818;
+  font-family: FuturaBookC;
+  line-height: 1.375rem;
+}
+
+.submit {
+  font-size: 0.9375rem;
+  color: #ffffff;
+  font-family: FuturaDemic;
+  top: 0.5rem;
+  width: 12.5rem;
+  position: relative;
+  bottom: 0.125rem;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0.125rem solid #E3B873;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #E3B873;
+  box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
+  border-radius: 0.125rem;
 }
 
 .header .header__menu {
@@ -325,6 +353,52 @@ a {
   margin-left: 1.25rem;
 }
 
+.check-form {
+  display: block;
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  user-select: none;
+}
+
+.check-form input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.check-form input:checked ~ .checkmark {
+  background-color: #E3B873;
+}
+.check-form input:checked ~ .checkmark:after {
+  display: block;
+  left: 0.4375rem;
+  top: 0.125rem;
+  width: 0.125rem;
+  height: 0.4375rem;
+  border: solid white;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.check-form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.125rem;
+  width: 1.125rem;
+}
+.check-form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check-form:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
 .online-control__video iframe {
   box-shadow: 0px 1.25rem 3.125rem rgba(0, 0, 0, 0.15);
 }
@@ -391,7 +465,7 @@ a {
   margin: 5rem auto;
 }
 
-.online__control-name input:not([type=checkbox]) {
+input:not([type=checkbox]) {
   width: 14.375rem;
   padding: 0.5rem 0;
   font-size: 1.125rem;
@@ -416,23 +490,6 @@ a {
   line-height: 1.25rem;
 }
 
-.online__control .submit {
-  font-size: 0.9375rem;
-  color: #ffffff;
-  font-family: FuturaDemic;
-  top: 0.5rem;
-  width: 12.5rem;
-  position: relative;
-  bottom: 0.125rem;
-  width: 12.5rem;
-  height: 3.125rem;
-  border: 0.125rem solid #E3B873;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #E3B873;
-  box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
-  border-radius: 0.125rem;
-}
 .online__control-name ::-webkit-input-placeholder {
   font-size: 1.125rem;
   color: #363636;
@@ -462,58 +519,6 @@ a {
 }
 .online__control-name input[type=tel] {
   margin-right: 3.0625rem;
-}
-.online__control .checkbox__text {
-  font-size: 1rem;
-  color: #181818;
-  font-family: FuturaBookC;
-  line-height: 1.375rem;
-}
-
-.check-form {
-  display: block;
-  position: relative;
-  padding-left: 2.1875rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.375rem;
-  user-select: none;
-}
-
-.check-form input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-.check-form input:checked ~ .checkmark {
-  background-color: #E3B873;
-}
-.check-form input:checked ~ .checkmark:after {
-  display: block;
-  left: 0.4375rem;
-  top: 0.125rem;
-  width: 0.125rem;
-  height: 0.4375rem;
-  border: solid white;
-  border-width: 0 0.1875rem 0.1875rem 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.check-form .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1.125rem;
-  width: 1.125rem;
-}
-.check-form .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.check-form:hover input ~ .checkmark {
-  background-color: #ccc;
 }
 
 .types_of_repair__columns {
@@ -624,14 +629,6 @@ a {
   line-height: 1.5625rem;
   text-align: center;
 }
-
-.circles {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
 .circle.circle-one {
   position: relative;
   left: 12.5rem;
@@ -649,7 +646,6 @@ a {
   bottom: 2.0625rem;
   left: 4.375rem;
 }
-
 .circle.circle-two {
   position: relative;
   left: 18.75rem;
@@ -666,7 +662,6 @@ a {
   color: #363636;
   content: "Free metering ";
 }
-
 .circle.circle-three {
   position: relative;
   left: 300px;
@@ -683,7 +678,6 @@ a {
   bottom: 1.4375rem;
   left: 4.375rem;
 }
-
 .circle.circle_four {
   position: relative;
   left: 12.5rem;
@@ -700,6 +694,113 @@ a {
   width: 14.0625rem;
   bottom: 1.4375rem;
   left: 4.375rem;
+}
+
+.circles {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
+.request {
+  display: flex;
+}
+.request__elipse {
+  width: 55%;
+}
+.request__form {
+  width: 38%;
+  padding-top: 76px;
+  padding-left: 42px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.request__form-main {
+  display: flex;
+  background-color: #131313;
+  padding: 28px 49px;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-conrol {
+  margin: 0 auto;
+  width: 100%;
+}
+.form-conrol .checkbox__text {
+  color: #FFFFFF;
+}
+
+.form-title {
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: FuturaDemiC;
+  line-height: 1.5625rem;
+  text-align: center;
+}
+
+.form__paragraph {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-section-control__item {
+  margin-top: 2.125rem;
+}
+.form-section-control__item ::-webkit-input-placeholder {
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  font-family: FuturaMediumC;
+  line-height: 1.5625rem;
+}
+.form-section-control__item :-moz-placeholder {
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  font-family: FuturaMediumC;
+  line-height: 1.5625rem;
+}
+.form-section-control__item ::-moz-placeholder {
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  font-family: FuturaMediumC;
+  line-height: 1.5625rem;
+}
+.form-section-control__item :-ms-input-placeholder {
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  font-family: FuturaMediumC;
+  line-height: 1.5625rem;
+}
+.form-section-control__item input[type=text],
+.form-section-control__item input[type=tel],
+.form-section-control__item input[type=email] {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  border-bottom: 0.125rem solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.4375rem;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.saving {
+  margin-top: 2.1875rem;
+  display: flex;
+  align-items: center;
+}
+.saving__text {
+  font-size: 1.25rem;
+  color: #E3B873;
+  font-family: FuturaDemiC;
+  line-height: 1.5625rem;
+  text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+}
+
+.form-section-control__item input {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
