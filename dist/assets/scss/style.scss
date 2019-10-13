@@ -6,7 +6,7 @@
         }
         
         .wrapper {
-            width: 1440px;
+            max-width: 1440px;
             margin: 0 auto;
         }
         
@@ -53,6 +53,21 @@
             }
         }
         
+        @mixin after-circle () {
+            display: block;
+            position: relative;
+            font-family: FuturaMediumC;
+            font-size: 1.125rem;
+            line-height: 1.3125rem;
+            color: #363636;
+        }
+        
+        @mixin width-bottom-left($width, $bottom, $left) {
+            width: $width;
+            bottom: $bottom;
+            left: $left;
+        }
+        
         $link-hover: #ffffff;
         @mixin border-radius($radius) {
             -webkit-border-radius: $radius;
@@ -76,7 +91,7 @@
         .header {
             .header__menu {
                 @include flex(flex, space-between);
-                padding: 24px 100px 22px 85px;
+                padding: 1.5rem 6.25rem 1.375rem 5.3125rem;
                 background: $backgroundColor;
                 align-items: center;
                 .header__nav {
@@ -109,9 +124,9 @@
                     }
                     .header-contacts__button {
                         background: $main-color;
-                        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-                        border-radius: 2px;
-                        padding: 13px 33px;
+                        box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.2);
+                        border-radius: 0.125rem;
+                        padding: 0.8125rem 2.0625rem;
                         border-color: $main-color;
                         text-transform: uppercase;
                         @include size-color(0.813em, #ffffff, "FuturaDemiC");
@@ -139,21 +154,21 @@
                         width: 3.125em;
                         border-color: $main-color;
                         position: relative;
-                        top: 74px;
+                        top: 4.625rem;
                     }
                 }
                 .header-info {
                     flex-grow: 1;
                     background-image: url(assets/img/header/header_background.jpg);
-                    width: 1358px;
-                    height: 707px;
+                    width: 84.875rem;
+                    height: 44.1875rem;
                     background-size: cover;
                     &__content {
                         padding: 12.125em 0 0 3.750em;
                         width: 49%;
                     }
                     &__heading {
-                        line-height: 53px;
+                        line-height: 3.3125rem;
                         text-transform: uppercase;
                         @include size-color(2.5em, #ffffff, "Yeseva One");
                         span {
@@ -164,13 +179,13 @@
                         margin-top: 2.125em;
                         margin-bottom: 3.125em;
                         @include size-color(1.375em, #ffffff, "FuturaBookC");
-                        line-height: 30px;
+                        line-height: 1.875rem;
                         width: 72%;
                     }
                     &__button-left {
                         background-color: transparent;
-                        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-                        border-radius: 2px;
+                        box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
+                        border-radius: 0.125rem;
                         padding: 1.250em 2.531em;
                         border-color: #ffffff;
                         text-transform: uppercase;
@@ -189,8 +204,8 @@
                     @include max-content;
                     background-color: inherit;
                     position: relative;
-                    top: 310px;
-                    left: 99px;
+                    top: 19.375rem;
+                    left: 6.1875rem;
                     &__text {
                         @include size-color(1.188em, #ffffff, "Yeseva One");
                         text-transform: uppercase;
@@ -200,7 +215,7 @@
                         }
                     }
                     &__down {
-                        padding: 33px 45px 46px;
+                        padding: 2.0625rem 2.8125rem 2.875rem;
                         @include flex(flex, center);
                         align-items: center;
                     }
@@ -216,7 +231,7 @@
         // completed__project completed-project
         .completed-project {
             display: flex;
-            padding-top: 110px;
+            padding-top: 6.875rem;
             background-color: $backgroundColor;
             &__slider {
                 display: flex;
@@ -226,18 +241,18 @@
             }
             &__cities {
                 display: flex;
-                margin-bottom: 45px;
+                margin-bottom: 2.8125rem;
             }
             &__info {
                 flex-direction: column;
                 display: flex;
                 width: 40%;
                 padding-left: 6.25rem;
-                margin-top: 58px;
+                margin-top: 3.625rem;
             }
             &__gallery {
                 display: flex;
-                height: 482px;
+                height: 30.125rem;
                 .gallery-room1 {
                     margin-right: 2.875rem;
                 }
@@ -346,10 +361,10 @@
         // online__control
         .online-control {
             &__video iframe {
-                box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+                box-shadow: 0px 1.25rem 3.125rem rgba(0, 0, 0, 0.15);
             }
             &__name {
-                @include size-color(20px, #ffffff, Yeseva One);
+                @include size-color(1.25rem, #ffffff, Yeseva One);
                 font-style: normal;
                 font-weight: normal;
                 line-height: 1.75rem;
@@ -404,7 +419,7 @@
                 flex-direction: column;
             }
             &__form {
-                margin: 80px auto;
+                margin: 5rem auto;
             }
         }
         
@@ -444,7 +459,7 @@
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
                 background-color: $main-color;
-                box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+                box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
                 border-radius: 0.125rem;
             }
             &-name {
@@ -515,9 +530,11 @@
         
         .types_of_repair {
             &__columns {
+                flex-wrap: wrap;
+                width: 86%;
                 display: flex;
                 justify-content: space-between;
-                padding: 0 6.25rem;
+                margin: 0 auto;
             }
             &__header-block {
                 display: flex;
@@ -544,8 +561,8 @@
                 line-height: 1.5625rem;
             }
             &__list {
-                @include size-color(15px, #959595, FuturaBookC);
-                line-height: 25px;
+                @include size-color(0.9375rem, #959595, FuturaBookC);
+                line-height: 1.5625rem;
             }
             &__info {
                 width: 84.18%;
@@ -582,4 +599,87 @@
         
         .column3 {
             background-image: url(assets/img/main/designer_repair.jpg);
+        }
+        
+        .ellipse {
+            right: 10.5rem;
+            width: 39.75rem;
+            height: 39.75rem;
+            border-radius: 50%;
+            background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fff 21%, #fff 41%, #fff 20%, #E3B873 100%) border-box;
+            border: 0.1875rem solid transparent;
+            position: relative;
+        }
+        
+        .circle {
+            border-radius: 50%;
+            background-color: #ffffff;
+            width: 3.4375rem;
+            height: 3.4375rem;
+            margin: 0 auto;
+            &__inner {
+                @include flex(flex, center);
+                align-items: center;
+                border-radius: 50%;
+                background-color: #E3B873;
+                width: 2.625rem;
+                height: 2.625rem;
+                margin: auto;
+                position: relative;
+                top: 0.375rem;
+            }
+            &__number {
+                @include size-color(1.125rem, #FFFFFF, Yeseva One);
+                line-height: 1.5625rem;
+                text-align: center;
+            }
+        }
+        
+        .circles {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        .circle.circle-one {
+            position: relative;
+            left: 12.5rem;
+            top: 2.5rem;
+            &:after {
+                @include after-circle();
+                content: "Our specialist will arrive for measurements per day contact, or appoint a date convenient for you ";
+                @include width-bottom-left(22.75rem, 2.0625rem, 4.375rem);
+            }
+        }
+        
+        .circle.circle-two {
+            position: relative;
+            left: 18.75rem;
+            &:after {
+                @include width-bottom-left(22.75rem, 1.4375rem, 4.375rem);
+                @include after-circle();
+                content: "Free metering ";
+            }
+        }
+        
+        .circle.circle-three {
+            position: relative;
+            left: 300px;
+            &:after {
+                @include after-circle();
+                content: "Free consultation";
+                @include width-bottom-left(22.75rem, 1.4375rem, 4.375rem);
+            }
+        }
+        
+        .circle.circle_four {
+            position: relative;
+            left: 12.5rem;
+            bottom: 2.8125rem;
+            &:after {
+                content: "Get a cost estimate and the timing of your future repairs";
+                @include after-circle();
+                @include width-bottom-left(14.0625rem, 1.4375rem, 4.375rem);
+            }
         }
