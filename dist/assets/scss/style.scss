@@ -71,12 +71,21 @@
         left: $left;
     }
     
+    .header-scroll__link {
+        &:hover {}
+    }
+    
     $link-hover: #ffffff;
     @mixin border-radius($radius) {
         -webkit-border-radius: $radius;
         -moz-border-radius: $radius;
         -ms-border-radius: $radius;
         border-radius: $radius;
+    }
+    
+    @mixin hoverLinkList() {
+        color: $main-color;
+        text-decoration: underline;
     }
     
     $main-color: #E3B873;
@@ -127,7 +136,7 @@
                         padding-right: 3.063em;
                         @include size-color(0.875em, #ffffff, "FuturaBookC");
                         .header-list__link:hover {
-                            color: $main-color;
+                            @include hoverLinkList();
                         }
                     }
                 }
@@ -290,7 +299,6 @@
         &__header {
             @include size-color(1.688em, $main-color, " Yeseva One");
             line-height: 2.3125rem;
-            letter-spacing: -0.07em;
             text-transform: uppercase;
             &-block {
                 display: flex;
@@ -345,8 +353,7 @@
         line-height: 1.1875rem;
         text-transform: uppercase;
         &:hover {
-            color: $main-color;
-            text-decoration: underline;
+            @include hoverLinkList();
         }
     }
     
@@ -682,9 +689,11 @@
         @include flex(flex, space-between);
         flex-direction: column;
         height: 100%;
+        background-image: url(assets/img/main/build.png);
     }
     
     .request {
+        overflow: hidden;
         display: flex;
         &__elipse {
             width: 55%;
@@ -758,4 +767,52 @@
     
     .form-section-control__item input {
         color: #ffffff;
+    }
+    
+    .types_of_design {
+        margin-top: 210px;
+        &__wrapper {
+            background-image: url(assets/img/main/background_design.jpg);
+            background-repeat: no-repeat;
+            background-size: auto 54rem;
+        }
+        &__header {
+            @extend .completed-project__header;
+        }
+        &__list {
+            padding: 8.625rem 6.1875rem;
+            width: 34%;
+        }
+        &__schedule {
+            @include size-color(20px, #FFFFFF, Proxima Nova);
+            @include flex(flex, space-between);
+            list-style: none;
+            line-height: 2.125rem;
+            height: 32.25rem;
+            flex-direction: column;
+            margin-top: 2.1875rem;
+        }
+        &__images {
+            @include flex(flex, flex-end);
+            margin-right: 100px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            &-col {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2.6875rem;
+                position: relative;
+                bottom: 63.4375rem;
+                img:nth-of-type(1) {
+                    margin-bottom: 2.375rem;
+                }
+                &-first {
+                    margin-top: 4.5625rem;
+                }
+            }
+        }
+        &__item:hover {
+            @include hoverLinkList();
+        }
     }

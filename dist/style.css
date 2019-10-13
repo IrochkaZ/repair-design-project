@@ -81,6 +81,7 @@ a {
 }
 .header .header__menu .header__nav .header__list .header-list__item .header-list__link:hover {
   color: #E3B873;
+  text-decoration: underline;
 }
 .header .header__menu .header-logo {
   width: 20%;
@@ -251,12 +252,11 @@ a {
   right: 1.625rem;
   margin: auto;
 }
-.completed-project__header {
+.completed-project__header, .types_of_design__header {
   font-size: 1.688em;
   color: #E3B873;
   font-family: " Yeseva One";
   line-height: 2.3125rem;
-  letter-spacing: -0.07em;
   text-transform: uppercase;
 }
 .completed-project__header-block {
@@ -701,9 +701,11 @@ input:not([type=checkbox]) {
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
+  background-image: url(assets/img/main/build.png);
 }
 
 .request {
+  overflow: hidden;
   display: flex;
 }
 .request__elipse {
@@ -801,6 +803,56 @@ input:not([type=checkbox]) {
 
 .form-section-control__item input {
   color: #ffffff;
+}
+
+.types_of_design {
+  margin-top: 210px;
+}
+.types_of_design__wrapper {
+  background-image: url(assets/img/main/background_design.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 54rem;
+}
+.types_of_design__list {
+  padding: 8.625rem 6.1875rem;
+  width: 34%;
+}
+.types_of_design__schedule {
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: Proxima Nova;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  line-height: 2.125rem;
+  height: 32.25rem;
+  flex-direction: column;
+  margin-top: 2.1875rem;
+}
+.types_of_design__images {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.types_of_design__images-col {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.6875rem;
+  position: relative;
+  bottom: 63.4375rem;
+}
+.types_of_design__images-col img:nth-of-type(1) {
+  margin-bottom: 2.375rem;
+}
+.types_of_design__images-col-first {
+  margin-top: 4.5625rem;
+}
+.types_of_design__item:hover {
+  color: #E3B873;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
