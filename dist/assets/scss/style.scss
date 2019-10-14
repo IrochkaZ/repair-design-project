@@ -748,12 +748,12 @@
             padding-bottom: 0.4375rem;
         }
     }
-    
+
     .button-wrapper {
         display: flex;
         justify-content: flex-end;
     }
-    
+
     .saving {
         margin-top: 2.1875rem;
         display: flex;
@@ -764,11 +764,11 @@
             text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
         }
     }
-    
+
     .form-section-control__item input {
         color: #ffffff;
     }
-    
+
     .types_of_design {
         margin-top: 210px;
         &__wrapper {
@@ -781,7 +781,9 @@
         }
         &__list {
             padding: 8.625rem 6.1875rem;
-            width: 34%;
+            width: 100%;
+        display: flex;
+        justify-content: space-between;
         }
         &__schedule {
             @include size-color(20px, #FFFFFF, Proxima Nova);
@@ -793,26 +795,32 @@
             margin-top: 2.1875rem;
         }
         &__images {
-            @include flex(flex, flex-end);
-            margin-right: 100px;
-            position: relative;
             display: flex;
-            flex-direction: row;
-            &-col {
-                display: flex;
+            margin-top: -180px;
+            width: 60%;
+            &-col{
+                @include flex(flex,space-around );
                 flex-direction: column;
-                margin-left: 2.6875rem;
-                position: relative;
-                bottom: 63.4375rem;
-                img:nth-of-type(1) {
-                    margin-bottom: 2.375rem;
+                margin-right: 2.625rem;
+                &-first{
+                    margin-bottom: 2.5rem;
                 }
-                &-first {
-                    margin-top: 4.5625rem;
+                &-third{
+                    margin-bottom: 2.5rem;
                 }
+                    &.col2 {
+                        height: fit-content;
+                        margin-top: -4.375rem;
+                    }
+
             }
         }
+        &__right {
+            width: 30%
+        }
+
         &__item:hover {
             @include hoverLinkList();
         }
     }
+
