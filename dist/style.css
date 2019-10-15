@@ -593,6 +593,10 @@ input:not([type=checkbox]) {
   background-image: url(assets/img/main/designer_repair.jpg);
 }
 
+.column4 {
+  background-image: url(assets/img/main/overhaul2.jpg);
+}
+
 .ellipse {
   right: 10.5rem;
   width: 39.75rem;
@@ -814,7 +818,7 @@ input:not([type=checkbox]) {
   background-size: auto 54rem;
 }
 .types_of_design__list {
-  padding: 8.625rem 6.1875rem;
+  padding: 8.625rem 6.1875rem 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -858,6 +862,28 @@ input:not([type=checkbox]) {
 .types_of_design__item:hover {
   color: #E3B873;
   text-decoration: underline;
+}
+
+.types_of_repair__article-text {
+  font-family: FuturaBookC;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #363636;
+}
+
+section.types_of_repair.design-project {
+  margin-top: 52px;
+}
+
+.types_of_repair__article {
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+
+button.types_of_repair__btn.design-project__button {
+  width: 63%;
+  text-align: start;
 }
 
 /*# sourceMappingURL=style.css.map */
