@@ -864,6 +864,10 @@ input:not([type=checkbox]) {
   text-decoration: underline;
 }
 
+.types_of_repair__article {
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
 .types_of_repair__article-text {
   font-family: FuturaBookC;
   font-size: 20px;
@@ -872,16 +876,12 @@ input:not([type=checkbox]) {
   color: #363636;
 }
 
-section.types_of_repair.design-project {
+.design-project {
   margin-top: 52px;
+  z-index: 10;
 }
 
-.types_of_repair__article {
-  margin-top: 14px;
-  margin-bottom: 24px;
-}
-
-button.types_of_repair__btn.design-project__button {
+.design-project__button {
   width: 63%;
   text-align: start;
 }
