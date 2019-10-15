@@ -841,11 +841,138 @@
     }
     
     .design-project {
-        margin-top: 52px;
+        margin-top: 4.125rem;
         z-index: 10;
+        &__button {
+            width: 63%;
+            text-align: start;
+        }
     }
     
-    .design-project__button {
-        width: 63%;
-        text-align: start;
+    .how_working {
+        display: flex;
+        justify-content: space-between;
+        background-color: #131313;
+        padding-top: 437px;
+        margin-top: -608px;
+        &__info {
+            margin-top: 65px;
+            margin-bottom: 84px;
+        }
+        &__header {
+            @extend .completed-project__header;
+            width: 63%;
+        }
+        &__article-title {
+            @extend .completed-text__header;
+            margin-top: 14px;
+        }
+        &__wrapper_left {
+            padding-left: 100px;
+            width: 30%;
+        }
+        &__p {
+            padding-bottom: 13px;
+            font-family: FuturaDemiC;
+            font-size: 15px;
+            line-height: 21px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        &__page-number {
+            padding-top: 22px;
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        &__article {
+            font-family: FuturaBookC;
+            font-size: 15px;
+            line-height: 25px;
+            color: #FFFFFF;
+            &-p {
+                margin-bottom: 13px;
+            }
+        }
+    }
+    
+    .how_working_article-p {
+        margin-bottom: 13px;
+    }
+    
+    ul.how_working__list {
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+    
+    .how_working__wrapper_rigth {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    p.how_working__list-number {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    
+    .how_working__wrapper_rigth {
+        margin-top: 67px;
+    }
+    
+    .how_working_article-p {
+        margin-bottom: 13px;
+    }
+    
+    ul.how_working__list {
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+    
+    .how_working__wrapper_rigth {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .how_working__list {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    how_working__schedule {
+        display: flex;
+        width: 100%;
+    }
+    
+    .how_working__list-row {
+        width: 40%;
+    }
+    
+    .how_working__wrapper_rigth {
+        width: 60%;
+    }
+    
+    p.how_working__list-descr {
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+    
+    .how_working__wrapper_rigth {
+        margin-top: 81px;
     }
