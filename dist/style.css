@@ -865,15 +865,15 @@ input:not([type=checkbox]) {
 }
 
 .types_of_repair__article {
-  margin-top: 14px;
-  margin-bottom: 24px;
+  margin-top: 0.875rem;
+  margin-bottom: 1.5rem;
 }
 .types_of_repair__article-text {
-  font-family: FuturaBookC;
-  font-size: 20px;
-  line-height: 27px;
-  text-align: center;
+  font-size: 1.25rem;
   color: #363636;
+  font-family: FuturaBookC;
+  line-height: 1.6875rem;
+  text-align: center;
 }
 
 .design-project {
@@ -891,74 +891,68 @@ input:not([type=checkbox]) {
   background-color: #131313;
   padding-top: 437px;
   margin-top: -608px;
+  padding-left: 100px;
+  padding-right: 60px;
 }
 .how_working__info {
-  margin-top: 65px;
-  margin-bottom: 84px;
+  margin-top: 4.0625rem;
+  margin-bottom: 5.25rem;
 }
 .how_working__header {
-  width: 63%;
+  width: 53%;
 }
 .how_working__article-title {
-  margin-top: 14px;
+  margin-top: 1.0625rem;
 }
 .how_working__wrapper_left {
-  padding-left: 100px;
-  width: 30%;
+  width: 27%;
 }
 .how_working__p {
-  padding-bottom: 13px;
+  font-size: 0.9375rem;
+  color: #ffffff;
   font-family: FuturaDemiC;
-  font-size: 15px;
-  line-height: 21px;
+  padding-bottom: 0.8125rem;
+  line-height: 1.3125rem;
   text-transform: uppercase;
-  color: #FFFFFF;
 }
 .how_working__page-number {
-  padding-top: 22px;
+  font-size: 1.125rem;
+  color: #ffffff;
   font-family: Yeseva One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
+  padding-top: 1.375rem;
+  line-height: 1.5625rem;
   text-transform: uppercase;
-  color: #FFFFFF;
 }
 .how_working__article {
+  font-size: 0.9375rem;
+  color: #ffffff;
   font-family: FuturaBookC;
-  font-size: 15px;
   line-height: 25px;
-  color: #FFFFFF;
 }
 .how_working__article-p {
   margin-bottom: 13px;
 }
-
-.how_working_article-p {
-  margin-bottom: 13px;
-}
-
-ul.how_working__list {
-  font-family: FuturaBookC;
+.how_working__list {
   font-size: 15px;
+  color: #ffffff;
+  font-family: FuturaBookC;
   line-height: 18px;
-  color: #FFFFFF;
 }
-
 .how_working__wrapper_rigth {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-p.how_working__list-number {
-  font-family: Yeseva One;
-  font-style: normal;
-  font-weight: normal;
+.how_working__list-number {
   font-size: 15px;
+  color: #b3b3b3;
+  font-family: Yeseva One;
+  margin-bottom: 15px;
+  display: inline-block;
+  border-bottom: 2px solid #E3B873;
   line-height: 21px;
   text-transform: uppercase;
-  color: #FFFFFF;
 }
 
 .how_working__wrapper_rigth {
@@ -969,11 +963,11 @@ p.how_working__list-number {
   margin-bottom: 13px;
 }
 
-ul.how_working__list {
+.how_working__list {
   font-family: FuturaBookC;
   font-size: 15px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #b3b3b3;
 }
 
 .how_working__wrapper_rigth {
@@ -984,31 +978,40 @@ ul.how_working__list {
 
 .how_working__list {
   display: flex;
-  flex-direction: row;
-}
-
-how_working__schedule {
-  display: flex;
-  width: 100%;
-}
-
-.how_working__list-row {
-  width: 40%;
-}
-
-.how_working__wrapper_rigth {
-  width: 60%;
 }
 
 p.how_working__list-descr {
   font-family: FuturaBookC;
   font-size: 15px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .how_working__wrapper_rigth {
   margin-top: 81px;
+}
+
+.how_working__list-row {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+}
+
+.how_working__list-item {
+  margin-bottom: 44px;
+  width: 46%;
+}
+
+.how_working__article-title {
+  font-size: 15px;
+  color: #E3B873;
+  font-family: Yeseva One;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.how_working__list-link:hover {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

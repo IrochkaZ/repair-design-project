@@ -1,978 +1,967 @@
-    @import "../normalize.css-master/normalize.css";
-    * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .wrapper {
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-    
-    button,
-    button:active,
-    button:focus {
-        outline: none;
-        cursor: pointer;
-        &:hover {
-            opacity: 0.8;
-            box-shadow: 0px 0.3125rem 0.9375rem rgba(116, 88, 44, 0.3);
-        }
-    }
-    
-    input {
-        cursor: pointer;
-        &:hover {
-            opacity: 0.8;
-        }
-    }
-    
-    @mixin max-content {
-        width: -moz-max-content;
-        width: -webkit-max-content;
-        width: -o-max-content;
-        width: -ms-max-content;
-    }
-    
-    @mixin size-color($fontSize, $color, $font-family) {
-        font-size: $fontSize;
-        color: $color;
-        font-family: $font-family;
-    }
-    
-    @mixin placeholder {
-         ::-webkit-input-placeholder {
-            @content
-        }
-         :-moz-placeholder {
-            @content
-        }
-         ::-moz-placeholder {
-            @content
-        }
-         :-ms-input-placeholder {
-            @content
-        }
-    }
-    
-    @mixin after-circle () {
-        display: block;
-        position: relative;
-        font-family: FuturaMediumC;
-        font-size: 1.125rem;
-        line-height: 1.3125rem;
-        color: #363636;
-    }
-    
-    @mixin width-bottom-left($width, $bottom, $left) {
-        width: $width;
-        bottom: $bottom;
-        left: $left;
-    }
-    
-    .header-scroll__link {
-        &:hover {}
-    }
-    
-    $link-hover: #ffffff;
-    @mixin border-radius($radius) {
-        -webkit-border-radius: $radius;
-        -moz-border-radius: $radius;
-        -ms-border-radius: $radius;
-        border-radius: $radius;
-    }
-    
-    @mixin hoverLinkList() {
-        color: $main-color;
-        text-decoration: underline;
-    }
-    
-    $main-color: #E3B873;
-    $backgroundColor: #131313;
-    @mixin flex($flexDispaly, $justifyContent) {
-        display: $flexDispaly;
-        justify-content: $justifyContent;
-    }
-    
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    .checkbox__text {
-        @include size-color(1rem, #181818, FuturaBookC);
-        line-height: 1.375rem;
-    }
-    
-    .submit {
-        @include size-color(0.9375rem, #ffffff, FuturaDemic);
-        top: 0.5rem;
-        width: 12.5rem;
-        position: relative;
-        bottom: 0.125rem;
-        width: 12.5rem;
-        height: 3.125rem;
-        border: 0.125rem solid $main-color;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        background-color: $main-color;
-        box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
-        border-radius: 0.125rem;
-    }
-    
-    .header {
-        .header__menu {
-            @include flex(flex, space-between);
-            padding: 1.5rem 6.25rem 1.375rem 5.3125rem;
-            background: $backgroundColor;
-            align-items: center;
-            .header__nav {
-                .header__list {
-                    width: 40%;
+            @import "../normalize.css-master/normalize.css";
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .wrapper {
+                max-width: 1440px;
+                margin: 0 auto;
+            }
+            
+            button,
+            button:active,
+            button:focus {
+                outline: none;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                    box-shadow: 0px 0.3125rem 0.9375rem rgba(116, 88, 44, 0.3);
+                }
+            }
+            
+            input {
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            
+            @mixin max-content {
+                width: -moz-max-content;
+                width: -webkit-max-content;
+                width: -o-max-content;
+                width: -ms-max-content;
+            }
+            
+            @mixin size-color($fontSize, $color, $font-family) {
+                font-size: $fontSize;
+                color: $color;
+                font-family: $font-family;
+            }
+            
+            @mixin placeholder {
+                 ::-webkit-input-placeholder {
+                    @content
+                }
+                 :-moz-placeholder {
+                    @content
+                }
+                 ::-moz-placeholder {
+                    @content
+                }
+                 :-ms-input-placeholder {
+                    @content
+                }
+            }
+            
+            @mixin after-circle () {
+                display: block;
+                position: relative;
+                font-family: FuturaMediumC;
+                font-size: 1.125rem;
+                line-height: 1.3125rem;
+                color: #363636;
+            }
+            
+            @mixin width-bottom-left($width, $bottom, $left) {
+                width: $width;
+                bottom: $bottom;
+                left: $left;
+            }
+            
+            .header-scroll__link {
+                &:hover {}
+            }
+            
+            $link-hover: #ffffff;
+            @mixin border-radius($radius) {
+                -webkit-border-radius: $radius;
+                -moz-border-radius: $radius;
+                -ms-border-radius: $radius;
+                border-radius: $radius;
+            }
+            
+            @mixin hoverLinkList() {
+                color: $main-color;
+                text-decoration: underline;
+            }
+            
+            $main-color: #E3B873;
+            $backgroundColor: #131313;
+            @mixin flex($flexDispaly, $justifyContent) {
+                display: $flexDispaly;
+                justify-content: $justifyContent;
+            }
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .checkbox__text {
+                @include size-color(1rem, #181818, FuturaBookC);
+                line-height: 1.375rem;
+            }
+            
+            .submit {
+                @include size-color(0.9375rem, #ffffff, FuturaDemic);
+                top: 0.5rem;
+                width: 12.5rem;
+                position: relative;
+                bottom: 0.125rem;
+                width: 12.5rem;
+                height: 3.125rem;
+                border: 0.125rem solid $main-color;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background-color: $main-color;
+                box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
+                border-radius: 0.125rem;
+            }
+            
+            .header {
+                .header__menu {
                     @include flex(flex, space-between);
-                    .header-list__item {
-                        list-style: none;
-                        padding-right: 3.063em;
-                        @include size-color(0.875em, #ffffff, "FuturaBookC");
-                        .header-list__link:hover {
-                            @include hoverLinkList();
+                    padding: 1.5rem 6.25rem 1.375rem 5.3125rem;
+                    background: $backgroundColor;
+                    align-items: center;
+                    .header__nav {
+                        .header__list {
+                            width: 40%;
+                            @include flex(flex, space-between);
+                            .header-list__item {
+                                list-style: none;
+                                padding-right: 3.063em;
+                                @include size-color(0.875em, #ffffff, "FuturaBookC");
+                                .header-list__link:hover {
+                                    @include hoverLinkList();
+                                }
+                            }
+                        }
+                    }
+                    .header-logo {
+                        width: 20%;
+                        &__text {
+                            @include size-color(0.875em, $main-color, "FuturaDemiC");
+                            text-transform: uppercase;
+                        }
+                    }
+                    .header__contacts {
+                        @include flex(flex, space-between);
+                        align-items: center;
+                        .header-contacts__telephone {
+                            @extend .header-logo__text;
+                            padding-right: 2.625em;
+                        }
+                        .header-contacts__button {
+                            background: $main-color;
+                            box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.2);
+                            border-radius: 0.125rem;
+                            padding: 0.8125rem 2.0625rem;
+                            border-color: $main-color;
+                            text-transform: uppercase;
+                            @include size-color(0.813em, #ffffff, "FuturaDemiC");
+                        }
+                    }
+                }
+                .header__main {
+                    display: flex;
+                    .header-vertical {
+                        @include flex(flex, center);
+                        flex-direction: column;
+                        width: 5.76%;
+                        background-color: $backgroundColor;
+                        align-items: center;
+                        &__text {
+                            transform: rotate(90deg);
+                            @include size-color(0.875em, $main-color, "FuturaDemiC");
+                            text-transform: uppercase;
+                        }
+                        &__link:hover {
+                            color: $link-hover;
+                        }
+                        &__line {
+                            transform: rotate(90deg);
+                            width: 3.125em;
+                            border-color: $main-color;
+                            position: relative;
+                            top: 4.625rem;
+                        }
+                    }
+                    .header-info {
+                        flex-grow: 1;
+                        background-image: url(assets/img/header/header_background.jpg);
+                        width: 84.875rem;
+                        height: 44.1875rem;
+                        background-size: cover;
+                        &__content {
+                            padding: 12.125em 0 0 3.750em;
+                            width: 49%;
+                        }
+                        &__heading {
+                            line-height: 3.3125rem;
+                            text-transform: uppercase;
+                            @include size-color(2.5em, #ffffff, "Yeseva One");
+                            span {
+                                color: $main-color;
+                            }
+                        }
+                        &__text {
+                            margin-top: 2.125em;
+                            margin-bottom: 3.125em;
+                            @include size-color(1.375em, #ffffff, "FuturaBookC");
+                            line-height: 1.875rem;
+                            width: 72%;
+                        }
+                        &__button-left {
+                            background-color: transparent;
+                            box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
+                            border-radius: 0.125rem;
+                            padding: 1.250em 2.531em;
+                            border-color: #ffffff;
+                            text-transform: uppercase;
+                            @include size-color(0.813em, #ffffff, "FuturaDemiC");
+                            &:hover {
+                                background-color: $main-color;
+                                border-color: $main-color;
+                            }
+                        }
+                        &__button-right {
+                            @extend .header-info__button-left;
+                            margin-left: 1.250em;
+                        }
+                    }
+                    .header-scroll {
+                        @include max-content;
+                        background-color: inherit;
+                        position: relative;
+                        top: 19.375rem;
+                        left: 6.1875rem;
+                        &__text {
+                            @include size-color(1.188em, #ffffff, "Yeseva One");
+                            text-transform: uppercase;
+                            padding-right: 1.125em;
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                        &__down {
+                            padding: 2.0625rem 2.8125rem 2.875rem;
+                            @include flex(flex, center);
+                            align-items: center;
+                        }
+                        &__link {
+                            &:hover {
+                                color: #ffffff;
+                            }
                         }
                     }
                 }
             }
-            .header-logo {
-                width: 20%;
-                &__text {
-                    @include size-color(0.875em, $main-color, "FuturaDemiC");
-                    text-transform: uppercase;
-                }
-            }
-            .header__contacts {
-                @include flex(flex, space-between);
-                align-items: center;
-                .header-contacts__telephone {
-                    @extend .header-logo__text;
-                    padding-right: 2.625em;
-                }
-                .header-contacts__button {
-                    background: $main-color;
-                    box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.2);
-                    border-radius: 0.125rem;
-                    padding: 0.8125rem 2.0625rem;
-                    border-color: $main-color;
-                    text-transform: uppercase;
-                    @include size-color(0.813em, #ffffff, "FuturaDemiC");
-                }
-            }
-        }
-        .header__main {
-            display: flex;
-            .header-vertical {
-                @include flex(flex, center);
-                flex-direction: column;
-                width: 5.76%;
+            
+            // completed__project completed-project
+            .completed-project {
+                display: flex;
+                padding-top: 6.875rem;
                 background-color: $backgroundColor;
-                align-items: center;
-                &__text {
-                    transform: rotate(90deg);
-                    @include size-color(0.875em, $main-color, "FuturaDemiC");
-                    text-transform: uppercase;
+                &__slider {
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    width: 60%;
                 }
-                &__link:hover {
-                    color: $link-hover;
+                &__cities {
+                    display: flex;
+                    margin-bottom: 2.8125rem;
+                }
+                &__info {
+                    flex-direction: column;
+                    display: flex;
+                    width: 40%;
+                    padding-left: 6.25rem;
+                    margin-top: 3.625rem;
+                }
+                &__gallery {
+                    display: flex;
+                    height: 30.125rem;
+                    .gallery-room1 {
+                        margin-right: 2.875rem;
+                    }
+                    .gallery-arrow__slider {
+                        position: sticky;
+                        outline: none;
+                        right: 1.625rem;
+                        margin: auto;
+                    }
+                }
+                &__header {
+                    @include size-color(1.688em, $main-color, " Yeseva One");
+                    line-height: 2.3125rem;
+                    text-transform: uppercase;
+                    &-block {
+                        display: flex;
+                    }
+                }
+                &__article {
+                    @include size-color(1.125em, #ffffff, "FuturaBookC");
+                    line-height: 1.8125rem;
+                    width: 87%;
+                    padding: 2.25rem 0 3.5rem;
                 }
                 &__line {
-                    transform: rotate(90deg);
-                    width: 3.125em;
-                    border-color: $main-color;
                     position: relative;
-                    top: 4.625rem;
+                    width: 5.75rem;
+                    top: 3.25rem;
+                    left: 0.4375rem;
+                    border-color: $main-color;
                 }
             }
-            .header-info {
-                flex-grow: 1;
-                background-image: url(assets/img/header/header_background.jpg);
-                width: 84.875rem;
-                height: 44.1875rem;
-                background-size: cover;
-                &__content {
-                    padding: 12.125em 0 0 3.750em;
-                    width: 49%;
+            
+            .completed-text {
+                display: flex;
+                flex-direction: column;
+                &__row {
+                    display: flex;
+                    flex-direction: row;
+                    padding-bottom: 2rem;
                 }
-                &__heading {
-                    line-height: 3.3125rem;
+                &__block {
+                    width: 37%;
+                }
+                &__article {
+                    @include size-color(0.9375rem, #FFFFFF, "FuturaBookC");
+                    width: 60%;
+                    line-height: 1.25rem;
+                }
+                &__header {
+                    @include size-color(1.125rem, $main-color, "Yeseva One");
+                    line-height: 1.5625rem;
                     text-transform: uppercase;
-                    @include size-color(2.5em, #ffffff, "Yeseva One");
-                    span {
-                        color: $main-color;
-                    }
-                }
-                &__text {
-                    margin-top: 2.125em;
-                    margin-bottom: 3.125em;
-                    @include size-color(1.375em, #ffffff, "FuturaBookC");
-                    line-height: 1.875rem;
-                    width: 72%;
-                }
-                &__button-left {
-                    background-color: transparent;
-                    box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
-                    border-radius: 0.125rem;
-                    padding: 1.250em 2.531em;
-                    border-color: #ffffff;
-                    text-transform: uppercase;
-                    @include size-color(0.813em, #ffffff, "FuturaDemiC");
-                    &:hover {
-                        background-color: $main-color;
-                        border-color: $main-color;
-                    }
-                }
-                &__button-right {
-                    @extend .header-info__button-left;
-                    margin-left: 1.250em;
+                    padding-bottom: 1rem;
+                    font-weight: normal;
                 }
             }
-            .header-scroll {
-                @include max-content;
-                background-color: inherit;
+            
+            .cities-city {
+                @include size-color(0.875rem, rgba(255, 255, 255, 0.3), "Yeseva One");
+                margin-right: 3.75rem;
+                justify-content: space-between;
+                list-style: none;
+                font-weight: normal;
+                line-height: 1.1875rem;
+                text-transform: uppercase;
+                &:hover {
+                    @include hoverLinkList();
+                }
+            }
+            
+            .completed-project__navigation {
+                display: flex;
+                align-items: center;
+            }
+            
+            .completed__project-arrow {
+                width: 2.5913rem;
+                font-size: 2.375rem;
+                color: #ffffff;
+                &:hover {
+                    color: rgba(255, 255, 255, 0.3);
+                }
+            }
+            
+            .arrow-list__item {
+                margin-right: 0.25rem;
+                color: rgba(255, 255, 255, 0.3);
+                font-size: 2.5rem;
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+            
+            .arrow {
+                &--back {
+                    margin-right: 1.875rem;
+                }
+                &--next {
+                    margin-left: 1.25rem;
+                }
+            }
+            
+            // online__control
+            .check-form {
+                display: block;
                 position: relative;
-                top: 19.375rem;
-                left: 6.1875rem;
-                &__text {
-                    @include size-color(1.188em, #ffffff, "Yeseva One");
-                    text-transform: uppercase;
-                    padding-right: 1.125em;
-                    &:hover {
-                        color: $main-color;
+                padding-left: 2.1875rem;
+                margin-bottom: 0.75rem;
+                font-size: 1.375rem;
+                user-select: none;
+            }
+            
+            .check-form {
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    height: 0;
+                    width: 0;
+                    &:checked~.checkmark {
+                        background-color: $main-color;
+                        &:after {
+                            display: block;
+                            left: 0.4375rem;
+                            top: 0.125rem;
+                            width: 0.125rem;
+                            height: 0.4375rem;
+                            border: solid white;
+                            border-width: 0 0.1875rem 0.1875rem 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
                     }
                 }
-                &__down {
-                    padding: 2.0625rem 2.8125rem 2.875rem;
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 1.125rem;
+                    width: 1.125rem;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                }
+                &:hover input~.checkmark {
+                    background-color: #ccc;
+                }
+            }
+            
+            .online-control {
+                &__video iframe {
+                    box-shadow: 0px 1.25rem 3.125rem rgba(0, 0, 0, 0.15);
+                }
+                &__name {
+                    @include size-color(1.25rem, #ffffff, Yeseva One);
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 1.75rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding-top: 3.9375rem;
+                }
+                &__black {
+                    background-color: inherit;
+                    background-color: #131313;
+                }
+                &__header {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 16rem;
+                }
+                &__logo {
+                    color: $main-color;
+                    font-size: 1.875rem;
+                    padding-top: 0.625rem;
+                }
+                &__video {
+                    position: relative;
+                    bottom: 9.5rem;
+                    left: 27.5rem;
+                }
+                &__white {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 auto;
+                    width: 55%;
+                }
+                &__article {
+                    @include size-color(1.25rem, #363636, FuturaBookC);
+                    margin-left: 3.5rem;
+                    width: 42.5625rem;
+                    line-height: 34px;
+                    text-align: center;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 3.4375rem;
+                        height: 0.125rem;
+                        background-color: $main-color;
+                        margin: -2.9375rem auto 1.75rem;
+                    }
+                }
+                &__form {
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__form {
+                    margin: 5rem auto;
+                }
+            }
+            
+            input:not([type="checkbox"]) {
+                width: 14.375rem;
+                padding: 0.5rem 0;
+                font-size: 1.125rem;
+                border: none;
+                border-bottom: 0.0625rem solid rgba(54, 54, 54, 0.3);
+            }
+            
+            .form__wrapper {
+                display: flex;
+            }
+            
+            .check-form {
+                align-self: center;
+                align-self: center;
+                margin-top: 2.1875rem;
+            }
+            
+            .form__paragraph {
+                @include size-color(0.9375rem, rgba(54, 54, 54, 0.5), FuturaBookC);
+                line-height: 1.25rem;
+            }
+            
+            .online__control {
+                &-name {
+                    @include placeholder {
+                        @include size-color(1.125rem, #363636, FuturaBookC);
+                        line-height: 1.5rem;
+                    }
+                    input[type="text"] {
+                        margin-right: 3.875rem;
+                    }
+                    input[type="tel"] {
+                        margin-right: 3.0625rem;
+                    }
+                }
+            }
+            
+            .types_of_repair {
+                &__columns {
+                    flex-wrap: wrap;
+                    width: 86%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 auto;
+                }
+                &__header-block {
+                    display: flex;
+                    justify-content: center;
+                }
+                &__name {
+                    @extend .online-control__name;
+                    color: #181818;
+                    padding-top: 3.6875rem;
+                }
+                &__logo {
+                    @extend .online-control__logo;
+                }
+                &__header {
+                    @extend .online-control__header;
+                    padding-bottom: 1.375rem;
+                }
+                &__img {
+                    width: 24.5rem;
+                    height: 26.3125rem;
+                }
+                &__title {
+                    @include size-color(1.125rem, #363636, Yeseva One);
+                    line-height: 1.5625rem;
+                }
+                &__list {
+                    @include size-color(0.9375rem, #959595, FuturaBookC);
+                    line-height: 1.5625rem;
+                }
+                &__info {
+                    width: 84.18%;
+                    padding: 1.5625rem 1.8125rem 3.875rem 2.125rem;
+                    margin: 0 auto;
+                    position: relative;
+                    bottom: 7.9375rem;
+                    background-color: #ffffff;
+                    box-shadow: 0.625rem 0.625rem 1.25rem rgba(0, 0, 0, 0.03);
+                }
+                &__btn {
+                    @include size-color(1.125rem, #FFFFFF, Yeseva One);
+                    border: none;
+                    padding: 0.9375rem 1.4375rem;
+                    line-height: 1.5625rem;
+                    text-transform: uppercase;
+                    background: #E3B873;
+                    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                }
+                &__btn-wrapper {
+                    padding-left: 2.125rem;
+                    position: relative;
+                    bottom: 9.5625rem;
+                }
+            }
+            
+            .column1 {
+                background-image: url(assets/img/main/redecorating.jpg);
+            }
+            
+            .column2 {
+                background-image: url(assets/img/main/overhaul.jpg);
+            }
+            
+            .column3 {
+                background-image: url(assets/img/main/designer_repair.jpg);
+            }
+            
+            .column4 {
+                background-image: url(assets/img/main/overhaul2.jpg);
+            }
+            
+            .ellipse {
+                right: 10.5rem;
+                width: 39.75rem;
+                height: 39.75rem;
+                border-radius: 50%;
+                background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fff 21%, #fff 41%, #fff 20%, #E3B873 100%) border-box;
+                border: 0.1875rem solid transparent;
+                position: relative;
+            }
+            
+            .circle {
+                border-radius: 50%;
+                background-color: #ffffff;
+                width: 3.4375rem;
+                height: 3.4375rem;
+                margin: 0 auto;
+                &__inner {
                     @include flex(flex, center);
                     align-items: center;
+                    border-radius: 50%;
+                    background-color: #E3B873;
+                    width: 2.625rem;
+                    height: 2.625rem;
+                    margin: auto;
+                    position: relative;
+                    top: 0.375rem;
                 }
-                &__link {
-                    &:hover {
-                        color: #ffffff;
+                &__number {
+                    @include size-color(1.125rem, #FFFFFF, Yeseva One);
+                    line-height: 1.5625rem;
+                    text-align: center;
+                }
+                &.circle-one {
+                    position: relative;
+                    left: 12.5rem;
+                    top: 2.5rem;
+                    &:after {
+                        @include after-circle();
+                        content: "Our specialist will arrive for measurements per day contact, or appoint a date convenient for you ";
+                        @include width-bottom-left(22.75rem, 2.0625rem, 4.375rem);
+                    }
+                }
+                &.circle-two {
+                    position: relative;
+                    left: 18.75rem;
+                    &:after {
+                        @include width-bottom-left(22.75rem, 1.4375rem, 4.375rem);
+                        @include after-circle();
+                        content: "Free metering ";
+                    }
+                }
+                &.circle-three {
+                    position: relative;
+                    left: 300px;
+                    &:after {
+                        @include after-circle();
+                        content: "Free consultation";
+                        @include width-bottom-left(22.75rem, 1.4375rem, 4.375rem);
+                    }
+                }
+                &.circle_four {
+                    position: relative;
+                    left: 12.5rem;
+                    bottom: 2.8125rem;
+                    &:after {
+                        content: "Get a cost estimate and the timing of your future repairs";
+                        @include after-circle();
+                        @include width-bottom-left(14.0625rem, 1.4375rem, 4.375rem);
                     }
                 }
             }
-        }
-    }
-    
-    // completed__project completed-project
-    .completed-project {
-        display: flex;
-        padding-top: 6.875rem;
-        background-color: $backgroundColor;
-        &__slider {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            width: 60%;
-        }
-        &__cities {
-            display: flex;
-            margin-bottom: 2.8125rem;
-        }
-        &__info {
-            flex-direction: column;
-            display: flex;
-            width: 40%;
-            padding-left: 6.25rem;
-            margin-top: 3.625rem;
-        }
-        &__gallery {
-            display: flex;
-            height: 30.125rem;
-            .gallery-room1 {
-                margin-right: 2.875rem;
-            }
-            .gallery-arrow__slider {
-                position: sticky;
-                outline: none;
-                right: 1.625rem;
-                margin: auto;
-            }
-        }
-        &__header {
-            @include size-color(1.688em, $main-color, " Yeseva One");
-            line-height: 2.3125rem;
-            text-transform: uppercase;
-            &-block {
-                display: flex;
-            }
-        }
-        &__article {
-            @include size-color(1.125em, #ffffff, "FuturaBookC");
-            line-height: 1.8125rem;
-            width: 87%;
-            padding: 2.25rem 0 3.5rem;
-        }
-        &__line {
-            position: relative;
-            width: 5.75rem;
-            top: 3.25rem;
-            left: 0.4375rem;
-            border-color: $main-color;
-        }
-    }
-    
-    .completed-text {
-        display: flex;
-        flex-direction: column;
-        &__row {
-            display: flex;
-            flex-direction: row;
-            padding-bottom: 2rem;
-        }
-        &__block {
-            width: 37%;
-        }
-        &__article {
-            @include size-color(0.9375rem, #FFFFFF, "FuturaBookC");
-            width: 60%;
-            line-height: 1.25rem;
-        }
-        &__header {
-            @include size-color(1.125rem, $main-color, "Yeseva One");
-            line-height: 1.5625rem;
-            text-transform: uppercase;
-            padding-bottom: 1rem;
-            font-weight: normal;
-        }
-    }
-    
-    .cities-city {
-        @include size-color(0.875rem, rgba(255, 255, 255, 0.3), "Yeseva One");
-        margin-right: 3.75rem;
-        justify-content: space-between;
-        list-style: none;
-        font-weight: normal;
-        line-height: 1.1875rem;
-        text-transform: uppercase;
-        &:hover {
-            @include hoverLinkList();
-        }
-    }
-    
-    .completed-project__navigation {
-        display: flex;
-        align-items: center;
-    }
-    
-    .completed__project-arrow {
-        width: 2.5913rem;
-        font-size: 2.375rem;
-        color: #ffffff;
-        &:hover {
-            color: rgba(255, 255, 255, 0.3);
-        }
-    }
-    
-    .arrow-list__item {
-        margin-right: 0.25rem;
-        color: rgba(255, 255, 255, 0.3);
-        font-size: 2.5rem;
-        &:hover {
-            color: #ffffff;
-        }
-    }
-    
-    .arrow {
-        &--back {
-            margin-right: 1.875rem;
-        }
-        &--next {
-            margin-left: 1.25rem;
-        }
-    }
-    
-    // online__control
-    .check-form {
-        display: block;
-        position: relative;
-        padding-left: 2.1875rem;
-        margin-bottom: 0.75rem;
-        font-size: 1.375rem;
-        user-select: none;
-    }
-    
-    .check-form {
-        input {
-            position: absolute;
-            opacity: 0;
-            height: 0;
-            width: 0;
-            &:checked~.checkmark {
-                background-color: $main-color;
-                &:after {
-                    display: block;
-                    left: 0.4375rem;
-                    top: 0.125rem;
-                    width: 0.125rem;
-                    height: 0.4375rem;
-                    border: solid white;
-                    border-width: 0 0.1875rem 0.1875rem 0;
-                    -webkit-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                }
-            }
-        }
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 1.125rem;
-            width: 1.125rem;
-            &:after {
-                content: "";
-                position: absolute;
-                display: none;
-            }
-        }
-        &:hover input~.checkmark {
-            background-color: #ccc;
-        }
-    }
-    
-    .online-control {
-        &__video iframe {
-            box-shadow: 0px 1.25rem 3.125rem rgba(0, 0, 0, 0.15);
-        }
-        &__name {
-            @include size-color(1.25rem, #ffffff, Yeseva One);
-            font-style: normal;
-            font-weight: normal;
-            line-height: 1.75rem;
-            text-align: center;
-            text-transform: uppercase;
-            padding-top: 3.9375rem;
-        }
-        &__black {
-            background-color: inherit;
-            background-color: #131313;
-        }
-        &__header {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 16rem;
-        }
-        &__logo {
-            color: $main-color;
-            font-size: 1.875rem;
-            padding-top: 0.625rem;
-        }
-        &__video {
-            position: relative;
-            bottom: 9.5rem;
-            left: 27.5rem;
-        }
-        &__white {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto;
-            width: 55%;
-        }
-        &__article {
-            @include size-color(1.25rem, #363636, FuturaBookC);
-            margin-left: 3.5rem;
-            width: 42.5625rem;
-            line-height: 34px;
-            text-align: center;
-            &::before {
-                content: "";
-                display: block;
-                width: 3.4375rem;
-                height: 0.125rem;
-                background-color: $main-color;
-                margin: -2.9375rem auto 1.75rem;
-            }
-        }
-        &__form {
-            display: flex;
-            flex-direction: column;
-        }
-        &__form {
-            margin: 5rem auto;
-        }
-    }
-    
-    input:not([type="checkbox"]) {
-        width: 14.375rem;
-        padding: 0.5rem 0;
-        font-size: 1.125rem;
-        border: none;
-        border-bottom: 0.0625rem solid rgba(54, 54, 54, 0.3);
-    }
-    
-    .form__wrapper {
-        display: flex;
-    }
-    
-    .check-form {
-        align-self: center;
-        align-self: center;
-        margin-top: 2.1875rem;
-    }
-    
-    .form__paragraph {
-        @include size-color(0.9375rem, rgba(54, 54, 54, 0.5), FuturaBookC);
-        line-height: 1.25rem;
-    }
-    
-    .online__control {
-        &-name {
-            @include placeholder {
-                @include size-color(1.125rem, #363636, FuturaBookC);
-                line-height: 1.5rem;
-            }
-            input[type="text"] {
-                margin-right: 3.875rem;
-            }
-            input[type="tel"] {
-                margin-right: 3.0625rem;
-            }
-        }
-    }
-    
-    .types_of_repair {
-        &__columns {
-            flex-wrap: wrap;
-            width: 86%;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-        }
-        &__header-block {
-            display: flex;
-            justify-content: center;
-        }
-        &__name {
-            @extend .online-control__name;
-            color: #181818;
-            padding-top: 3.6875rem;
-        }
-        &__logo {
-            @extend .online-control__logo;
-        }
-        &__header {
-            @extend .online-control__header;
-            padding-bottom: 1.375rem;
-        }
-        &__img {
-            width: 24.5rem;
-            height: 26.3125rem;
-        }
-        &__title {
-            @include size-color(1.125rem, #363636, Yeseva One);
-            line-height: 1.5625rem;
-        }
-        &__list {
-            @include size-color(0.9375rem, #959595, FuturaBookC);
-            line-height: 1.5625rem;
-        }
-        &__info {
-            width: 84.18%;
-            padding: 1.5625rem 1.8125rem 3.875rem 2.125rem;
-            margin: 0 auto;
-            position: relative;
-            bottom: 7.9375rem;
-            background-color: #ffffff;
-            box-shadow: 0.625rem 0.625rem 1.25rem rgba(0, 0, 0, 0.03);
-        }
-        &__btn {
-            @include size-color(1.125rem, #FFFFFF, Yeseva One);
-            border: none;
-            padding: 0.9375rem 1.4375rem;
-            line-height: 1.5625rem;
-            text-transform: uppercase;
-            background: #E3B873;
-            box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-        }
-        &__btn-wrapper {
-            padding-left: 2.125rem;
-            position: relative;
-            bottom: 9.5625rem;
-        }
-    }
-    
-    .column1 {
-        background-image: url(assets/img/main/redecorating.jpg);
-    }
-    
-    .column2 {
-        background-image: url(assets/img/main/overhaul.jpg);
-    }
-    
-    .column3 {
-        background-image: url(assets/img/main/designer_repair.jpg);
-    }
-    
-    .column4 {
-        background-image: url(assets/img/main/overhaul2.jpg);
-    }
-    
-    .ellipse {
-        right: 10.5rem;
-        width: 39.75rem;
-        height: 39.75rem;
-        border-radius: 50%;
-        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fff 21%, #fff 41%, #fff 20%, #E3B873 100%) border-box;
-        border: 0.1875rem solid transparent;
-        position: relative;
-    }
-    
-    .circle {
-        border-radius: 50%;
-        background-color: #ffffff;
-        width: 3.4375rem;
-        height: 3.4375rem;
-        margin: 0 auto;
-        &__inner {
-            @include flex(flex, center);
-            align-items: center;
-            border-radius: 50%;
-            background-color: #E3B873;
-            width: 2.625rem;
-            height: 2.625rem;
-            margin: auto;
-            position: relative;
-            top: 0.375rem;
-        }
-        &__number {
-            @include size-color(1.125rem, #FFFFFF, Yeseva One);
-            line-height: 1.5625rem;
-            text-align: center;
-        }
-        &.circle-one {
-            position: relative;
-            left: 12.5rem;
-            top: 2.5rem;
-            &:after {
-                @include after-circle();
-                content: "Our specialist will arrive for measurements per day contact, or appoint a date convenient for you ";
-                @include width-bottom-left(22.75rem, 2.0625rem, 4.375rem);
-            }
-        }
-        &.circle-two {
-            position: relative;
-            left: 18.75rem;
-            &:after {
-                @include width-bottom-left(22.75rem, 1.4375rem, 4.375rem);
-                @include after-circle();
-                content: "Free metering ";
-            }
-        }
-        &.circle-three {
-            position: relative;
-            left: 300px;
-            &:after {
-                @include after-circle();
-                content: "Free consultation";
-                @include width-bottom-left(22.75rem, 1.4375rem, 4.375rem);
-            }
-        }
-        &.circle_four {
-            position: relative;
-            left: 12.5rem;
-            bottom: 2.8125rem;
-            &:after {
-                content: "Get a cost estimate and the timing of your future repairs";
-                @include after-circle();
-                @include width-bottom-left(14.0625rem, 1.4375rem, 4.375rem);
-            }
-        }
-    }
-    
-    .circles {
-        @include flex(flex, space-between);
-        flex-direction: column;
-        height: 100%;
-        background-image: url(assets/img/main/build.png);
-    }
-    
-    .request {
-        overflow: hidden;
-        display: flex;
-        &__elipse {
-            width: 55%;
-        }
-        &__form {
-            width: 38%;
-            padding-top: 76px;
-            padding-left: 42px;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            &-main {
-                display: flex;
-                background-color: #131313;
-                padding: 28px 49px;
-                box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
-            }
-        }
-    }
-    
-    .form-conrol {
-        margin: 0 auto;
-        width: 100%;
-        .checkbox__text {
-            color: #FFFFFF;
-        }
-    }
-    
-    .form-title {
-        @include size-color(20px, #FFFFFF, FuturaDemiC);
-        line-height: 1.5625rem;
-        text-align: center;
-    }
-    
-    .form__paragraph {
-        color: rgba(255, 255, 255, 0.5);
-    }
-    
-    .form-section-control__item {
-        margin-top: 2.125rem;
-        @include placeholder {
-            @include size-color(1.125rem, #FFFFFF, FuturaMediumC);
-            line-height: 1.5625rem;
-        }
-        input[type="text"],
-        input[type="tel"],
-        input[type="email"] {
-            width: 100%;
-            background-color: inherit;
-            border: none;
-            border-bottom: 0.125rem solid rgba(255, 255, 255, 0.15);
-            padding-bottom: 0.4375rem;
-        }
-    }
-    
-    .button-wrapper {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .saving {
-        margin-top: 2.1875rem;
-        display: flex;
-        align-items: center;
-        &__text {
-            @include size-color(1.25rem, #E3B873, FuturaDemiC);
-            line-height: 1.5625rem;
-            text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
-        }
-    }
-    
-    .form-section-control__item input {
-        color: #ffffff;
-    }
-    
-    .types_of_design {
-        margin-top: 210px;
-        &__wrapper {
-            background-image: url(assets/img/main/background_design.jpg);
-            background-repeat: no-repeat;
-            background-size: auto 54rem;
-        }
-        &__header {
-            @extend .completed-project__header;
-        }
-        &__list {
-            padding: 8.625rem 6.1875rem 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        &__schedule {
-            @include size-color(20px, #FFFFFF, Proxima Nova);
-            @include flex(flex, space-between);
-            list-style: none;
-            line-height: 2.125rem;
-            height: 32.25rem;
-            flex-direction: column;
-            margin-top: 2.1875rem;
-        }
-        &__images {
-            display: flex;
-            margin-top: -180px;
-            width: 60%;
-            &-col {
-                @include flex(flex, space-around);
+            
+            .circles {
+                @include flex(flex, space-between);
                 flex-direction: column;
-                margin-right: 2.625rem;
-                &-first {
-                    margin-bottom: 2.5rem;
+                height: 100%;
+                background-image: url(assets/img/main/build.png);
+            }
+            
+            .request {
+                overflow: hidden;
+                display: flex;
+                &__elipse {
+                    width: 55%;
                 }
-                &-third {
-                    margin-bottom: 2.5rem;
-                }
-                &.col2 {
-                    height: fit-content;
-                    margin-top: -4.375rem;
+                &__form {
+                    width: 38%;
+                    padding-top: 76px;
+                    padding-left: 42px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    &-main {
+                        display: flex;
+                        background-color: #131313;
+                        padding: 28px 49px;
+                        box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+                    }
                 }
             }
-        }
-        &__right {
-            width: 30%
-        }
-        &__item:hover {
-            @include hoverLinkList();
-        }
-    }
-    
-    .types_of_repair {
-        &__article {
-            margin-top: 14px;
-            margin-bottom: 24px;
-            &-text {
-                font-family: FuturaBookC;
-                font-size: 20px;
-                line-height: 27px;
+            
+            .form-conrol {
+                margin: 0 auto;
+                width: 100%;
+                .checkbox__text {
+                    color: #FFFFFF;
+                }
+            }
+            
+            .form-title {
+                @include size-color(20px, #FFFFFF, FuturaDemiC);
+                line-height: 1.5625rem;
                 text-align: center;
-                color: #363636;
             }
-        }
-    }
-    
-    .design-project {
-        margin-top: 4.125rem;
-        z-index: 10;
-        &__button {
-            width: 63%;
-            text-align: start;
-        }
-    }
-    
-    .how_working {
-        display: flex;
-        justify-content: space-between;
-        background-color: #131313;
-        padding-top: 437px;
-        margin-top: -608px;
-        &__info {
-            margin-top: 65px;
-            margin-bottom: 84px;
-        }
-        &__header {
-            @extend .completed-project__header;
-            width: 63%;
-        }
-        &__article-title {
-            @extend .completed-text__header;
-            margin-top: 14px;
-        }
-        &__wrapper_left {
-            padding-left: 100px;
-            width: 30%;
-        }
-        &__p {
-            padding-bottom: 13px;
-            font-family: FuturaDemiC;
-            font-size: 15px;
-            line-height: 21px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-        }
-        &__page-number {
-            padding-top: 22px;
-            font-family: Yeseva One;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-        }
-        &__article {
-            font-family: FuturaBookC;
-            font-size: 15px;
-            line-height: 25px;
-            color: #FFFFFF;
-            &-p {
+            
+            .form__paragraph {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            
+            .form-section-control__item {
+                margin-top: 2.125rem;
+                @include placeholder {
+                    @include size-color(1.125rem, #FFFFFF, FuturaMediumC);
+                    line-height: 1.5625rem;
+                }
+                input[type="text"],
+                input[type="tel"],
+                input[type="email"] {
+                    width: 100%;
+                    background-color: inherit;
+                    border: none;
+                    border-bottom: 0.125rem solid rgba(255, 255, 255, 0.15);
+                    padding-bottom: 0.4375rem;
+                }
+            }
+            
+            .button-wrapper {
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .saving {
+                margin-top: 2.1875rem;
+                display: flex;
+                align-items: center;
+                &__text {
+                    @include size-color(1.25rem, #E3B873, FuturaDemiC);
+                    line-height: 1.5625rem;
+                    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+                }
+            }
+            
+            .form-section-control__item input {
+                color: #ffffff;
+            }
+            
+            .types_of_design {
+                margin-top: 210px;
+                &__wrapper {
+                    background-image: url(assets/img/main/background_design.jpg);
+                    background-repeat: no-repeat;
+                    background-size: auto 54rem;
+                }
+                &__header {
+                    @extend .completed-project__header;
+                }
+                &__list {
+                    padding: 8.625rem 6.1875rem 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__schedule {
+                    @include size-color(20px, #FFFFFF, Proxima Nova);
+                    @include flex(flex, space-between);
+                    list-style: none;
+                    line-height: 2.125rem;
+                    height: 32.25rem;
+                    flex-direction: column;
+                    margin-top: 2.1875rem;
+                }
+                &__images {
+                    display: flex;
+                    margin-top: -180px;
+                    width: 60%;
+                    &-col {
+                        @include flex(flex, space-around);
+                        flex-direction: column;
+                        margin-right: 2.625rem;
+                        &-first {
+                            margin-bottom: 2.5rem;
+                        }
+                        &-third {
+                            margin-bottom: 2.5rem;
+                        }
+                        &.col2 {
+                            height: fit-content;
+                            margin-top: -4.375rem;
+                        }
+                    }
+                }
+                &__right {
+                    width: 30%
+                }
+                &__item:hover {
+                    @include hoverLinkList();
+                }
+            }
+            
+            .types_of_repair {
+                &__article {
+                    margin-top: 0.875rem;
+                    margin-bottom: 1.5rem;
+                    &-text {
+                        @include size-color(1.25rem, #363636, FuturaBookC);
+                        line-height: 1.6875rem;
+                        text-align: center;
+                    }
+                }
+            }
+            
+            .design-project {
+                margin-top: 4.125rem;
+                z-index: 10;
+                &__button {
+                    width: 63%;
+                    text-align: start;
+                }
+            }
+            
+            .how_working {
+                display: flex;
+                justify-content: space-between;
+                background-color: #131313;
+                padding-top: 437px;
+                margin-top: -608px;
+                padding-left: 100px;
+                padding-right: 60px;
+                &__info {
+                    margin-top: 4.0625rem;
+                    margin-bottom: 5.25rem;
+                }
+                &__header {
+                    @extend .completed-project__header;
+                    width: 53%;
+                }
+                &__article-title {
+                    @extend .completed-text__header;
+                    margin-top: 1.0625rem;
+                }
+                &__wrapper_left {
+                    width: 27%;
+                }
+                &__p {
+                    @include size-color(0.9375rem, #ffffff, FuturaDemiC);
+                    padding-bottom: 0.8125rem;
+                    line-height: 1.3125rem;
+                    text-transform: uppercase;
+                }
+                &__page-number {
+                    @include size-color(1.125rem, #ffffff, Yeseva One);
+                    padding-top: 1.375rem;
+                    line-height: 1.5625rem;
+                    text-transform: uppercase;
+                }
+                &__article {
+                    @include size-color(0.9375rem, #ffffff, FuturaBookC);
+                    line-height: 25px;
+                    &-p {
+                        margin-bottom: 13px;
+                    }
+                }
+                &__list {
+                    @include size-color(15px, #ffffff, FuturaBookC);
+                    line-height: 18px;
+                }
+                &__wrapper_rigth {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+            }
+            
+            .how_working__list-number {
+                @include size-color(15px, #b3b3b3, Yeseva One);
+                margin-bottom: 15px;
+                display: inline-block;
+                border-bottom: 2px solid #E3B873;
+                line-height: 21px;
+                text-transform: uppercase;
+            }
+            
+            .how_working__wrapper_rigth {
+                margin-top: 67px;
+            }
+            
+            .how_working_article-p {
                 margin-bottom: 13px;
             }
-        }
-    }
-    
-    .how_working_article-p {
-        margin-bottom: 13px;
-    }
-    
-    ul.how_working__list {
-        font-family: FuturaBookC;
-        font-size: 15px;
-        line-height: 18px;
-        color: #FFFFFF;
-    }
-    
-    .how_working__wrapper_rigth {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    
-    p.how_working__list-number {
-        font-family: Yeseva One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 21px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }
-    
-    .how_working__wrapper_rigth {
-        margin-top: 67px;
-    }
-    
-    .how_working_article-p {
-        margin-bottom: 13px;
-    }
-    
-    ul.how_working__list {
-        font-family: FuturaBookC;
-        font-size: 15px;
-        line-height: 18px;
-        color: #FFFFFF;
-    }
-    
-    .how_working__wrapper_rigth {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    
-    .how_working__list {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    how_working__schedule {
-        display: flex;
-        width: 100%;
-    }
-    
-    .how_working__list-row {
-        width: 40%;
-    }
-    
-    .how_working__wrapper_rigth {
-        width: 60%;
-    }
-    
-    p.how_working__list-descr {
-        font-family: FuturaBookC;
-        font-size: 15px;
-        line-height: 18px;
-        color: #FFFFFF;
-    }
-    
-    .how_working__wrapper_rigth {
-        margin-top: 81px;
-    }
+            
+            .how_working__list {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 18px;
+                color: #b3b3b3;
+            }
+            
+            .how_working__wrapper_rigth {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            
+            .how_working__list {
+                display: flex;
+            }
+            
+            p.how_working__list-descr {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 18px;
+                color: rgba(255, 255, 255, 0.3);
+            }
+            
+            .how_working__wrapper_rigth {
+                margin-top: 81px;
+            }
+            
+            .how_working__list-row {
+                display: flex;
+                flex-direction: column;
+                width: 33.33%;
+            }
+            
+            .how_working__list-item {
+                margin-bottom: 44px;
+                width: 46%;
+            }
+            
+            .how_working__article-title {
+                @include size-color(15px, $main-color, Yeseva One);
+                line-height: 23px;
+                text-transform: uppercase;
+            }
+            
+            .how_working__list-link:hover {
+                color: #ffffff;
+            }
