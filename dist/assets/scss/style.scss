@@ -839,11 +839,17 @@
             }
             
             .design-project {
-                margin-top: 4.125rem;
+                margin-top: 3.125rem;
                 z-index: 10;
                 &__button {
                     width: 63%;
                     text-align: start;
+                    &:hover{
+                        background-color: #ffffff;
+                        color: $main-color;
+                        opacity: 1;
+                        box-shadow: inset 0 0 0 5px $main-color;
+                    }
                 }
             }
             
@@ -851,10 +857,10 @@
                 display: flex;
                 justify-content: space-between;
                 background-color: #131313;
-                padding-top: 437px;
+                padding-top: 430px;
                 margin-top: -608px;
                 padding-left: 100px;
-                padding-right: 60px;
+                
                 &__info {
                     margin-top: 4.0625rem;
                     margin-bottom: 5.25rem;
@@ -901,7 +907,7 @@
             }
             
             .how_working__list-number {
-                @include size-color(15px, #b3b3b3, Yeseva One);
+                @include size-color(15px, rgba(255, 255, 255, 0.3), Yeseva One);
                 margin-bottom: 15px;
                 display: inline-block;
                 border-bottom: 2px solid #E3B873;
@@ -916,14 +922,7 @@
             .how_working_article-p {
                 margin-bottom: 13px;
             }
-            
-            .how_working__list {
-                font-family: FuturaBookC;
-                font-size: 15px;
-                line-height: 18px;
-                color: #b3b3b3;
-            }
-            
+
             .how_working__wrapper_rigth {
                 display: flex;
                 flex-direction: column;
@@ -948,12 +947,11 @@
             .how_working__list-row {
                 display: flex;
                 flex-direction: column;
-                width: 33.33%;
+
             }
             
             .how_working__list-item {
                 margin-bottom: 44px;
-                width: 46%;
             }
             
             .how_working__article-title {
@@ -961,7 +959,20 @@
                 line-height: 23px;
                 text-transform: uppercase;
             }
-            
-            .how_working__list-link:hover {
-                color: #ffffff;
+
+            .how_working__list {
+                margin-right: 73px;
+                justify-content: space-between;
+            }
+
+            .how_working__wrapper_rigth {
+                width: 64%;
+            }
+
+            .how_working__list-row {
+                width: 16%;
+            }
+
+            .how_working__list-link:active{
+                color:#ffffff;
             }
