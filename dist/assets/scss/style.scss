@@ -107,6 +107,7 @@
             
             .submit {
                 @include size-color(0.9375rem, #ffffff, FuturaDemic);
+                text-transform: uppercase;
                 top: 0.5rem;
                 width: 12.5rem;
                 position: relative;
@@ -616,7 +617,7 @@
             .column4 {
                 background-image: url(assets/img/main/overhaul2.jpg);
             }
-            
+
             .ellipse {
                 right: 10.5rem;
                 width: 39.75rem;
@@ -626,7 +627,7 @@
                 border: 0.1875rem solid transparent;
                 position: relative;
             }
-            
+
             .circle {
                 border-radius: 50%;
                 background-color: #ffffff;
@@ -670,7 +671,7 @@
                 }
                 &.circle-three {
                     position: relative;
-                    left: 300px;
+                    left: 18.75rem;
                     &:after {
                         @include after-circle();
                         content: "Free consultation";
@@ -704,20 +705,19 @@
                 }
                 &__form {
                     width: 38%;
-                    padding-top: 76px;
-                    padding-left: 42px;
+                    padding-top: 4.75rem;
+                    padding-left: 2.625rem;
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
                     &-main {
                         display: flex;
                         background-color: #131313;
-                        padding: 28px 49px;
-                        box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+                        padding: 1.75rem 3.0625rem;
+                        box-shadow: 0px 1.875rem 30px rgba(0, 0, 0, 0.05);
                     }
                 }
             }
-            
             .form-conrol {
                 margin: 0 auto;
                 width: 100%;
@@ -725,17 +725,14 @@
                     color: #FFFFFF;
                 }
             }
-            
             .form-title {
-                @include size-color(20px, #FFFFFF, FuturaDemiC);
+                @include size-color(1.25rem, #FFFFFF, FuturaDemiC);
                 line-height: 1.5625rem;
                 text-align: center;
             }
-            
             .form__paragraph {
                 color: rgba(255, 255, 255, 0.5);
             }
-            
             .form-section-control__item {
                 margin-top: 2.125rem;
                 @include placeholder {
@@ -752,12 +749,14 @@
                     padding-bottom: 0.4375rem;
                 }
             }
-            
             .button-wrapper {
                 display: flex;
                 justify-content: flex-end;
+                .submit{
+                    font-size: 15px;
+
+                }
             }
-            
             .saving {
                 margin-top: 2.1875rem;
                 display: flex;
@@ -768,11 +767,9 @@
                     text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
                 }
             }
-            
             .form-section-control__item input {
                 color: #ffffff;
             }
-            
             .types_of_design {
                 margin-top: 210px;
                 &__wrapper {
@@ -790,7 +787,7 @@
                     justify-content: space-between;
                 }
                 &__schedule {
-                    @include size-color(20px, #FFFFFF, Proxima Nova);
+                    @include size-color(1.25rem, #FFFFFF, Proxima Nova);
                     @include flex(flex, space-between);
                     list-style: none;
                     line-height: 2.125rem;
@@ -825,7 +822,6 @@
                     @include hoverLinkList();
                 }
             }
-            
             .types_of_repair {
                 &__article {
                     margin-top: 0.875rem;
@@ -837,7 +833,6 @@
                     }
                 }
             }
-            
             .design-project {
                 margin-top: 3.125rem;
                 z-index: 10;
@@ -852,15 +847,13 @@
                     }
                 }
             }
-            
             .how_working {
                 display: flex;
                 justify-content: space-between;
                 background-color: #131313;
-                padding-top: 430px;
-                margin-top: -608px;
-                padding-left: 100px;
-                
+                padding-top: 26.875rem;
+                margin-top: -38rem;
+                padding-left: 6.25rem;
                 &__info {
                     margin-top: 4.0625rem;
                     margin-bottom: 5.25rem;
@@ -892,87 +885,136 @@
                     @include size-color(0.9375rem, #ffffff, FuturaBookC);
                     line-height: 25px;
                     &-p {
-                        margin-bottom: 13px;
+                        margin-bottom: 0.8125rem;
+                    }
+                    &-title {
+                        @include size-color(15px, $main-color, Yeseva One);
+                        line-height: 1.4375rem;
+                        text-transform: uppercase;
                     }
                 }
                 &__list {
-                    @include size-color(15px, #ffffff, FuturaBookC);
+                    @include flex(flex,space-between );
+                    margin-right: 4.5625rem;
+                    @include size-color(0.9375rem, #ffffff, FuturaBookC);
                     line-height: 18px;
+                    &-number {
+                        @include size-color(0.9375rem, rgba(255, 255, 255, 0.3), Yeseva One);
+                        margin-bottom: 0.9375rem;
+                        display: inline-block;
+                        border-bottom: 2px solid #E3B873;
+                        line-height: 1.3125rem;
+                        text-transform: uppercase;
+                    }
+                    &-descr {
+                        @include size-color(0.9375rem,rgba(255, 255, 255, 0.3) , FuturaBookC);
+                        line-height: 18px;
+                    }
+                    &-row {
+                        width: 16%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    &-item {
+                        margin-bottom: 2.75rem;
+                    }
+                    &-link:active{
+                        color:#ffffff;
+                    }
                 }
                 &__wrapper_rigth {
-                    display: flex;
+                    width: 64%;
+                    @include flex(flex,space-around );
                     flex-direction: column;
-                    justify-content: space-around;
+                    margin-top: 5.0625rem;
                 }
             }
-            
-            .how_working__list-number {
-                @include size-color(15px, rgba(255, 255, 255, 0.3), Yeseva One);
-                margin-bottom: 15px;
-                display: inline-block;
-                border-bottom: 2px solid #E3B873;
-                line-height: 21px;
-                text-transform: uppercase;
+
+            .team-header{
+                @extend  .online-control__header;
+                background-color: #131313;
+            &__name{
+                @extend  .online-control__name;
+                padding-top: 2.5625rem;
             }
-            
-            .how_working__wrapper_rigth {
-                margin-top: 67px;
+            &__logo{
+                @extend  .online-control__logo;
             }
-            
-            .how_working_article-p {
-                margin-bottom: 13px;
+            &__paraprapg{
+                @include size-color(1.25rem,#FFFFFF , FuturaBookC);
+                line-height: 1.6875rem;
+                text-align: center;
+                margin-top: 0.875rem;
+                width: 32%;
+            }
             }
 
-            .how_working__wrapper_rigth {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-            
-            .how_working__list {
-                display: flex;
-            }
-            
-            p.how_working__list-descr {
-                font-family: FuturaBookC;
-                font-size: 15px;
-                line-height: 18px;
-                color: rgba(255, 255, 255, 0.3);
-            }
-            
-            .how_working__wrapper_rigth {
-                margin-top: 81px;
-            }
-            
-            .how_working__list-row {
-                display: flex;
-                flex-direction: column;
+.team__gallery {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12.9375rem;
+    padding-right: 12.75rem;
+    margin-top: -17.75rem;
+    &-info {
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+    }
+    &-icon {
+        position: relative;
+        top: 59px;
+        right: 138px;
+    }
+    &-fullname {
+        display: flex;
+        flex-direction: column;
+        padding: 1.4375rem 1.3125rem;
+    }
+    &-name {
+        @include size-color(1.125rem,#181818 , Yeseva One);
+        line-height: 1.5625rem;
+        text-align: center;
+        }
+    &-position {
+        @include size-color(1.125rem,#959595 , FuturaBookC);
+            line-height: 1.625rem;
+            text-align: center;
+    }
+    &-btn{
+        @extend .types_of_repair__btn;
+        font-size: 0.8125rem;
+        padding: 0.5rem 1.4375rem;
+    }
+    &-description {
+        background-color: #ffffff;
+        position: relative;
+        bottom: 5.0625rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 87%;
+    }
+}
 
-            }
-            
-            .how_working__list-item {
-                margin-bottom: 44px;
-            }
-            
-            .how_working__article-title {
-                @include size-color(15px, $main-color, Yeseva One);
-                line-height: 23px;
-                text-transform: uppercase;
-            }
+.team__article{
+&-text {
+    @include size-color(1.25rem,#363636 , FuturaBookC);
+    width: 40%;
+    line-height: 2.125rem;
+    text-align: center;
+    margin: 0 auto;
+    &::before{
+        content: "";
+        display: block;
+        width: 3.4375rem;
+        height: 0.125rem;
+        background-color: #E3B873;
+        margin: -2.9375rem auto 1.75rem;
+    }
+}
+&-p {
+    width: 88%;
+    margin: 0 auto;
+}
+}
 
-            .how_working__list {
-                margin-right: 73px;
-                justify-content: space-between;
-            }
-
-            .how_working__wrapper_rigth {
-                width: 64%;
-            }
-
-            .how_working__list-row {
-                width: 16%;
-            }
-
-            .how_working__list-link:active{
-                color:#ffffff;
-            }
