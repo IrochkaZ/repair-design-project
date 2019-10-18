@@ -122,7 +122,7 @@
             .header {
                 .header__menu {
                     @include flexContent(flex, space-between);
-                    padding: 39px 100px 16px 85px;
+                    padding: 2.4375rem 6.25rem 1rem 5.3125rem;
                     background: $backgroundColor;
                     align-items: center;
                     .header__nav {
@@ -131,7 +131,7 @@
                             @include flexContent(flex, space-between);
                             .header-list__item {
                                 list-style: none;
-                                padding-right: 49.008px;
+                                padding-right: 3.063rem;
                                 @include size-color(0.875em, #ffffff, "FuturaBookC");
                                 .header-list__link:hover {
                                     @include hoverLinkList();
@@ -151,7 +151,7 @@
                         align-items: center;
                         .header-contacts__telephone {
                             @extend .header-logo__text;
-                            padding-right: 42px;
+                            padding-right: 2.625rem;
                         }
                         .header-contacts__button {
                             background: $main-color;
@@ -195,7 +195,7 @@
                         height: 44.1875rem;
                         background-size: cover;
                         &__content {
-                            padding: 194px 0 0 60px;
+                            padding: 12.125rem 0 0 3.75rem;
                             width: 49%;
                         }
                         &__heading {
@@ -207,18 +207,18 @@
                             }
                         }
                         &__text {
-                            margin-top: 12px;
-                            margin-bottom: 50px;
-                            @include size-color(22px, #ffffff, "FuturaBookC");
+                            margin-top: 0.75rem;
+                            margin-bottom: 3.125rem;
+                            @include size-color(1.375rem, #ffffff, "FuturaBookC");
                             line-height: 1.875rem;
                             width: 72%;
                         }
                         &__button-left {
-                            width: 207px;
+                            width: 12.9375rem;
                             background-color: transparent;
-                            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+                            box-shadow: 0px 0.3125rem 15px rgba(227, 184, 115, 0.3);
                             border-radius: 0.125rem;
-                            padding: 15px;
+                            padding: 0.9375rem;
                             border-color: #ffffff;
                             text-transform: uppercase;
                             @include size-color(0.813em, #ffffff, "FuturaDemiC");
@@ -236,12 +236,12 @@
                         @include max-content;
                         background-color: inherit;
                         position: relative;
-                        top: 353px;
-                        left: 84px;
+                        top: 22.0625rem;
+                        left: 5.25rem;
                         &__text {
-                            @include size-color(14px, #ffffff, Yeseva One);
+                            @include size-color(0.875rem, #ffffff, Yeseva One);
                             font-family: Yeseva One;
-                            line-height: 19px;
+                            line-height: 1.1875rem;
                             text-transform: uppercase;
                             padding-right: 1.125em;
                             &:hover {
@@ -265,7 +265,7 @@
             // completed__project completed-project
             .completed-project {
                 display: flex;
-                padding-top: 109px;
+                padding-top: 6.8125rem;
                 background-color: $backgroundColor;
                 &__slider {
                     display: flex;
@@ -276,14 +276,14 @@
                 &__cities {
                     display: flex;
                     margin-bottom: 2.8125rem;
-                    margin-left: 16px;
+                    margin-left: 1rem;
                 }
                 &__info {
                     flex-direction: column;
                     display: flex;
                     width: 40%;
-                    padding-left: 100px;
-                    margin-top: 68px;
+                    padding-left: 6.25rem;
+                    margin-top: 4.25rem;
                 }
                 &__gallery {
                     display: flex;
@@ -292,10 +292,19 @@
                         margin-right: 2.875rem;
                     }
                     .gallery-arrow__slider {
-                        position: sticky;
-                        outline: none;
-                        right: 1.625rem;
-                        margin: auto;
+                        // position: sticky;
+                        // outline: none;
+                        // right: 1.625rem;
+                        // margin: auto;
+                        top: 0;
+    right: 1.9375rem;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 30%;
+    height: 30%;
+    position: sticky;
+    outline: none;
                     }
                 }
                 &__header {
@@ -310,7 +319,7 @@
                     @include size-color(1.125em, #ffffff, "FuturaBookC");
                     line-height: 1.8125rem;
                     width: 87%;
-                    padding: 20px 0 48px;
+                    padding: 1.25rem 0 3rem;
                 }
                 &__line {
                     position: relative;
@@ -327,7 +336,7 @@
                 &__row {
                     display: flex;
                     flex-direction: row;
-                    margin-bottom: 42px;
+                    margin-bottom: 2.625rem;
                 }
                 &__block {
                     width: 39%;
@@ -361,7 +370,7 @@
             .completed-project__navigation {
                 display: flex;
                 align-items: center;
-                margin-top: 33px;
+                margin-top: 2.0625rem;
             }
             .completed__project-arrow {
                 width: 2.5913rem;
@@ -480,7 +489,7 @@
                     @include size-color(1.25rem, #363636, FuturaBookC);
                     margin-left: 3.5rem;
                     width: 42.5625rem;
-                    line-height: 34px;
+                    line-height: 2.125rem;
                     text-align: center;
                     &::before {
                         content: "";
@@ -588,7 +597,7 @@
                     line-height: 1.5625rem;
                     text-transform: uppercase;
                     background: $main-color;
-                    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(227, 184, 115, 0.3);
                 }
                 &__btn-wrapper {
                     padding-left: 2.125rem;
@@ -708,7 +717,7 @@
                         display: flex;
                         background-color: #131313;
                         padding: 1.75rem 3.0625rem;
-                        box-shadow: 0px 1.875rem 30px rgba(0, 0, 0, 0.05);
+                        box-shadow: 0px 1.875rem 1.875rem rgba(0, 0, 0, 0.05);
                     }
                 }
             }
@@ -746,7 +755,7 @@
             .form__button-wrapper {
                 @include flexContent(flex, flex-end);
                 .submit{
-                    font-size: 15px;
+                    font-size: 0.9375rem;
 
                 }
             }
@@ -757,14 +766,14 @@
                 &__text {
                     @include size-color(1.25rem, $main-color, FuturaDemiC);
                     line-height: 1.5625rem;
-                    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+                    text-shadow: 0px 0.1875rem 0.625rem rgba(227, 184, 115, 0.15);
                 }
             }
             .form-section-control__item input {
                 color: #ffffff;
             }
             .types_of_design {
-                margin-top: 210px;
+                margin-top: 13.125rem;
                 &__wrapper {
                     background-image: url(assets/img/main/background_design.jpg);
                     background-repeat: no-repeat;
@@ -789,7 +798,7 @@
                 }
                 &__images {
                     display: flex;
-                    margin-top: -180px;
+                    margin-top: -11.25rem;
                     width: 60%;
                     &-col {
                         @include flexContent(flex, space-around);
@@ -835,7 +844,7 @@
                         background-color: #ffffff;
                         color: $main-color;
                         opacity: 1;
-                        box-shadow: inset 0 0 0 5px $main-color;
+                        box-shadow: inset 0 0 0 0.3125rem $main-color;
                     }
                 }
             }
@@ -874,12 +883,12 @@
                 }
                 &__article {
                     @include size-color(0.9375rem, #ffffff, FuturaBookC);
-                    line-height: 25px;
+                    line-height: 1.5625rem;
                     &-p {
                         margin-bottom: 0.8125rem;
                     }
                     &-title {
-                        @include size-color(15px, $main-color, Yeseva One);
+                        @include size-color(0.9375rem, $main-color, Yeseva One);
                         line-height: 1.4375rem;
                         text-transform: uppercase;
                     }
@@ -888,18 +897,18 @@
                     @include flexContent(flex,space-between );
                     margin-right: 4.5625rem;
                     @include size-color(0.9375rem, #ffffff, FuturaBookC);
-                    line-height: 18px;
+                    line-height: 1.125rem;
                     &-number {
                         @include size-color(0.9375rem, rgba(255, 255, 255, 0.3), Yeseva One);
                         margin-bottom: 0.9375rem;
                         display: inline-block;
-                        border-bottom: 2px solid $main-color;
+                        border-bottom: 0.125rem solid $main-color;
                         line-height: 1.3125rem;
                         text-transform: uppercase;
                     }
                     &-descr {
                         @include size-color(0.9375rem,rgba(255, 255, 255, 0.3) , FuturaBookC);
-                        line-height: 18px;
+                        line-height: 1.125rem;
                     }
                     &-row {
                         width: 16%;
@@ -942,23 +951,21 @@
 
 .team__gallery {
     @include flexContent(flex, space-between);
+    display: flex;
     padding-left: 12.9375rem;
     padding-right: 12.75rem;
-    margin-top: -284px;
+    margin-top: -17.75rem;
     &-info {
         display: flex;
         flex-direction: column;
         z-index: 100;
     }
     &-icon {
-        height:100px;
-        width: 100px;
+        height:6.25rem;
+        width: 6.25rem;
         position: relative;
-        top: 59px;
-        right: 50px;
-        // position: relative;
-        // top: 59px;
-        // right: 138px;
+        top: 3.6875rem;
+        right: 3.125rem;
     }
     &-full-name {
         display: flex;
@@ -1014,43 +1021,43 @@
 }
 
 .comments {
-    margin-top: 51px;
+    margin-top: 3.1875rem;
 
 &__header{
     @extend .online-control__header;
-    padding-bottom: 49px;
+    padding-bottom: 3.0625rem;
     &-name{
         @extend .types_of_repair__name;
-        padding-top:48px;
+        padding-top:3rem;
     }
     &-article{
         @extend  .types_of_repair__article-text;
         width: 27%;
-        margin-top: 16px;
+        margin-top: 1rem;
     }
 }
 &__wrapper {
     @include flexContent(flex, space-between);
-    margin: 0 100px;
+    margin: 0 6.25rem;
 }
 &__full-name{
-    margin-left: 14px;
-    @include size-color(18px,  #181818, Yeseva One);
-    line-height: 23px;
+    margin-left: 0.875rem;
+    @include size-color(1.125rem,  #181818, Yeseva One);
+    line-height: 1.4375rem;
 }
 &__clients {
-    padding: 20px 32px 9px 30px;
+    padding: 1.25rem 2rem 0.5625rem 1.875rem;
     width: 32%;
     background: #FFFFFF;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0.625rem 3.125rem rgba(0, 0, 0, 0.04);
 }
 &__photo {
     border-radius: 50%;
 }
 &__text-article {
-    @include size-color(15px,#959595 , FuturaBookC);
+    @include size-color(0.9375rem,#959595 , FuturaBookC);
     width: 90%;
-    line-height: 27px;
+    line-height: 1.6875rem;
     }
 &__person {
     @include flexContent(flex, space-around);
@@ -1058,22 +1065,22 @@
     width: 75%;
 }
 &__data {
-    @include size-color(17px,#FFFFFF , Yeseva One);
+    @include size-color(1.0625rem,#FFFFFF , Yeseva One);
     display: flex;
     background: $main-color;
-    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-    line-height: 24px;
+    box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(227, 184, 115, 0.5);
+    line-height: 1.5rem;
     position: relative;
-    top: 37px;
-    right: 29px;
+    top: 2.3125rem;
+    right: 1.8125rem;
 }
 &__square {
     @include flexContent(flex, space-between);
-    padding: 13px 26px;
+    padding: 0.8125rem 1.625rem;
     align-items: center;
     margin: 0 auto;
     &-text {
-        padding-left: 13px;
+        padding-left: 0.8125rem;
     }
 }
 &__logo{
@@ -1082,7 +1089,7 @@
 }
 
 .border{
-    border-right: 1px #ffffff solid;
+    border-right: 0.0625rem #ffffff solid;
 }
 
 .title-question {
@@ -1095,7 +1102,7 @@
         position: relative;
         z-index: 100;
         width: 60%;
-        margin: 180px auto 0;
+        margin: 11.25rem auto 0;
     }
     &__inputs {
         @include flexContent(flex, space-between);
@@ -1111,13 +1118,16 @@
 }
 
 .question-inputs {
-    margin: 0 131px;
+    margin: 0 8.1875rem;
 }
 
+.question-text{
+    color:#ffffff;
+};
 
 .button-question{
     @include flexContent(flex, center);
-    margin-top: 47px;
+    margin-top: 2.9375rem;
 }
 
 .map{
@@ -1126,24 +1136,24 @@
     align-items: center;
     background: url(../dist/assets/img/main/background_map.jpg);
     background-repeat: no-repeat;
-    padding-top: 272px;
-    padding-bottom: 75px;
-    margin-top: -208px;
+    padding-top: 17rem;
+    padding-bottom: 4.6875rem;
+    margin-top: -13rem;
     &__contacts{
-        @include size-color(20px,$main-color ,Yeseva One);
+        @include size-color(1.25rem,$main-color ,Yeseva One);
         width: 43%;
         font-style: normal;
         font-weight: normal;
-        line-height: 28px;
+        line-height: 1.75rem;
         text-align: center;
         text-transform: uppercase;
     }
 }
 
 i {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #ffffff;
-    padding: 9px;
+    padding: 0.5625rem;
     border-radius: 50%;
     background-color:$main-color;
     &:hover{
@@ -1154,10 +1164,49 @@ i {
 
 
 .far.fa-envelope {
-    margin-right: 9px;
+    margin-right: 0.5625rem;
 }
 .socials {
-    margin-top: 22px;
+    margin-top: 1.375rem;
     margin-bottom: 2.4375rem;
 }
 
+
+@media (max-width: 1388px){
+html { font-size: 90%; };
+.completed-project__gallery .gallery-room1 {
+    margin-right: 0.875rem;
+}
+.gallery-arrow__slider {
+    width: 20%;
+    width: 20%;
+    right: 0.9375rem;
+}
+}
+
+@media (max-width: 1250px){
+    html { font-size: 85%; };
+    }
+
+@media (max-width: 1231px){
+    html { font-size: 85%; };
+    .team__gallery-description {
+        right: 1px;
+        background-color: #ffffff;
+        position: relative;
+        bottom: 5.0625rem;
+        display: flex;
+        flex-direction: column;
+        width: 81%;
+    }
+}
+
+@media (max-width: 1181px){
+    html { font-size: 83%; };
+    .team__gallery-description {
+        margin: 0;
+        right: 1px;
+        bottom: 65px;
+        width: 81%;
+}
+}
