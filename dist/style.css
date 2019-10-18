@@ -64,7 +64,7 @@ a {
 .header .header__menu {
   display: flex;
   justify-content: space-between;
-  padding: 21px 100px 16px 85px;
+  padding: 39px 100px 16px 85px;
   background: #131313;
   align-items: center;
 }
@@ -743,7 +743,7 @@ input:not([type=checkbox]) {
   color: #FFFFFF;
 }
 
-.form-title {
+.form__title {
   font-size: 1.25rem;
   color: #FFFFFF;
   font-family: FuturaDemiC;
@@ -792,11 +792,11 @@ input:not([type=checkbox]) {
   padding-bottom: 0.4375rem;
 }
 
-.button-wrapper {
+.form__button-wrapper {
   display: flex;
   justify-content: flex-end;
 }
-.button-wrapper .submit {
+.form__button-wrapper .submit {
   font-size: 15px;
 }
 
@@ -1156,6 +1156,85 @@ input:not([type=checkbox]) {
 
 .comments__square-text {
   padding-left: 13px;
+}
+
+.title-question {
+  text-transform: uppercase;
+  font-family: Yeseva One;
+}
+
+section.form.form__question {
+  position: relative;
+  z-index: 100;
+  width: 60%;
+  margin: 180px auto 0;
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.request__inputs.question-inputs {
+  margin: 0 131px;
+}
+
+.form__check {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-question {
+  justify-content: center;
+  margin-top: 47px;
+}
+
+.map__contacts {
+  width: 43%;
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+
+.map {
+  background-image: url(/dist/assets/img/main/background_map.jpg);
+  background-repeat: no-repeat;
+  padding-top: 272px;
+  padding-bottom: 75px;
+  margin-top: -208px;
+}
+
+section.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+i {
+  font-size: 15px;
+  color: #ffffff;
+  padding: 9px;
+  border-radius: 50%;
+  background-color: #E3B873;
+}
+i:hover {
+  color: #E3B873;
+  background-color: #ffffff;
+}
+
+i.far.fa-envelope {
+  margin-right: 9px;
+}
+
+.socials {
+  margin-top: 22px;
+  margin-bottom: 39px;
 }
 
 /*# sourceMappingURL=style.css.map */
