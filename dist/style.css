@@ -1017,7 +1017,7 @@ input:not([type=checkbox]) {
   justify-content: space-between;
   padding-left: 12.9375rem;
   padding-right: 12.75rem;
-  margin-top: -17.75rem;
+  margin-top: -284px;
 }
 .team__gallery-info {
   display: flex;
@@ -1025,9 +1025,11 @@ input:not([type=checkbox]) {
   z-index: 100;
 }
 .team__gallery-icon {
+  height: 100px;
+  width: 100px;
   position: relative;
   top: 59px;
-  right: 138px;
+  right: 50px;
 }
 .team__gallery-full-name {
   display: flex;
@@ -1119,11 +1121,11 @@ input:not([type=checkbox]) {
   border-radius: 50%;
 }
 .comments__text-article {
-  width: 90%;
-  font-family: FuturaBookC;
   font-size: 15px;
-  line-height: 27px;
   color: #959595;
+  font-family: FuturaBookC;
+  width: 90%;
+  line-height: 27px;
 }
 .comments__person {
   display: flex;
@@ -1144,18 +1146,17 @@ input:not([type=checkbox]) {
   right: 29px;
 }
 .comments__square {
-  padding: 13px 26px;
   display: flex;
+  justify-content: space-between;
+  padding: 13px 26px;
   align-items: center;
   margin: 0 auto;
-  justify-content: space-between;
+}
+.comments__square-text {
+  padding-left: 13px;
 }
 .border {
   border-right: 1px #ffffff solid;
-}
-
-.comments__square-text {
-  padding-left: 13px;
 }
 
 .title-question {
@@ -1163,26 +1164,24 @@ input:not([type=checkbox]) {
   font-family: Yeseva One;
 }
 
-section.form.form__question {
+.form__question {
   position: relative;
   z-index: 100;
   width: 60%;
   margin: 180px auto 0;
 }
-
 .form__inputs {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: row;
 }
-
-.request__inputs.question-inputs {
-  margin: 0 131px;
-}
-
 .form__check {
   display: flex;
   flex-direction: column;
+}
+
+.question-inputs {
+  margin: 0 131px;
 }
 
 .button-question {
@@ -1190,30 +1189,26 @@ section.form.form__question {
   margin-top: 47px;
 }
 
-.map__contacts {
-  width: 43%;
-  font-family: Yeseva One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #E3B873;
-}
-
 .map {
-  background-image: url(/dist/assets/img/main/background_map.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../dist/assets/img/main/background_map.jpg);
   background-repeat: no-repeat;
   padding-top: 272px;
   padding-bottom: 75px;
   margin-top: -208px;
 }
-
-section.map {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.map__contacts {
+  font-size: 20px;
+  color: #E3B873;
+  font-family: Yeseva One;
+  width: 43%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 i {
@@ -1228,7 +1223,7 @@ i:hover {
   background-color: #ffffff;
 }
 
-i.far.fa-envelope {
+.far.fa-envelope {
   margin-right: 9px;
 }
 
