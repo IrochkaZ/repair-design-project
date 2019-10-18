@@ -6,6 +6,7 @@
             }
 
             .wrapper {
+                overflow: hidden;
                 max-width: 1440px;
                 margin: 0 auto;
             }
@@ -46,16 +47,16 @@
             }
 
             @mixin placeholder {
-                 ::-webkit-input-placeholder {
+                ::-webkit-input-placeholder {
                     @content
                 }
-                 :-moz-placeholder {
+                :-moz-placeholder {
                     @content
                 }
-                 ::-moz-placeholder {
+                ::-moz-placeholder {
                     @content
                 }
-                 :-ms-input-placeholder {
+                :-ms-input-placeholder {
                     @content
                 }
             }
@@ -1104,6 +1105,9 @@
         display: flex;
         flex-direction: column;
     }
+    &__item-question {
+        width: 45%;
+    }
 }
 
 .question-inputs {
@@ -1154,6 +1158,6 @@ i {
 }
 .socials {
     margin-top: 22px;
-    margin-bottom: 39px;
+    margin-bottom: 2.4375rem;
 }
 
