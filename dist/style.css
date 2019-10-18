@@ -64,7 +64,7 @@ a {
 .header .header__menu {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 6.25rem 1.375rem 5.3125rem;
+  padding: 21px 100px 16px 85px;
   background: #131313;
   align-items: center;
 }
@@ -75,7 +75,7 @@ a {
 }
 .header .header__menu .header__nav .header__list .header-list__item {
   list-style: none;
-  padding-right: 3.063em;
+  padding-right: 49.008px;
   font-size: 0.875em;
   color: #ffffff;
   font-family: "FuturaBookC";
@@ -99,7 +99,7 @@ a {
   align-items: center;
 }
 .header .header__menu .header__contacts .header-contacts__telephone {
-  padding-right: 2.625em;
+  padding-right: 42px;
 }
 .header .header__menu .header__contacts .header-contacts__button {
   background: #E3B873;
@@ -148,7 +148,7 @@ a {
   background-size: cover;
 }
 .header .header__main .header-info__content {
-  padding: 12.125em 0 0 3.75em;
+  padding: 194px 0 0 60px;
   width: 49%;
 }
 .header .header__main .header-info__heading {
@@ -162,19 +162,20 @@ a {
   color: #E3B873;
 }
 .header .header__main .header-info__text {
-  margin-top: 2.125em;
-  margin-bottom: 3.125em;
-  font-size: 1.375em;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  font-size: 22px;
   color: #ffffff;
   font-family: "FuturaBookC";
   line-height: 1.875rem;
   width: 72%;
 }
 .header .header__main .header-info__button-left, .header .header__main .header-info__button-right {
+  width: 207px;
   background-color: transparent;
-  box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
   border-radius: 0.125rem;
-  padding: 1.25em 2.531em;
+  padding: 15px;
   border-color: #ffffff;
   text-transform: uppercase;
   font-size: 0.813em;
@@ -195,13 +196,15 @@ a {
   width: -ms-max-content;
   background-color: inherit;
   position: relative;
-  top: 19.375rem;
-  left: 6.1875rem;
+  top: 353px;
+  left: 84px;
 }
 .header .header__main .header-scroll__text {
-  font-size: 1.188em;
+  font-size: 14px;
   color: #ffffff;
-  font-family: "Yeseva One";
+  font-family: Yeseva One;
+  font-family: Yeseva One;
+  line-height: 19px;
   text-transform: uppercase;
   padding-right: 1.125em;
 }
@@ -209,7 +212,7 @@ a {
   color: #E3B873;
 }
 .header .header__main .header-scroll__down {
-  padding: 2.0625rem 2.8125rem 2.875rem;
+  padding: 33px 45px 46px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +223,7 @@ a {
 
 .completed-project {
   display: flex;
-  padding-top: 6.875rem;
+  padding-top: 109px;
   background-color: #131313;
 }
 .completed-project__slider {
@@ -232,13 +235,14 @@ a {
 .completed-project__cities {
   display: flex;
   margin-bottom: 2.8125rem;
+  margin-left: 16px;
 }
 .completed-project__info {
   flex-direction: column;
   display: flex;
   width: 40%;
-  padding-left: 6.25rem;
-  margin-top: 3.625rem;
+  padding-left: 100px;
+  margin-top: 68px;
 }
 .completed-project__gallery {
   display: flex;
@@ -269,7 +273,7 @@ a {
   font-family: "FuturaBookC";
   line-height: 1.8125rem;
   width: 87%;
-  padding: 2.25rem 0 3.5rem;
+  padding: 20px 0 48px;
 }
 .completed-project__line {
   position: relative;
@@ -286,10 +290,10 @@ a {
 .completed-text__row {
   display: flex;
   flex-direction: row;
-  padding-bottom: 2rem;
+  margin-bottom: 42px;
 }
 .completed-text__block {
-  width: 37%;
+  width: 39%;
 }
 .completed-text__article {
   font-size: 0.9375rem;
@@ -304,7 +308,6 @@ a {
   font-family: "Yeseva One";
   line-height: 1.5625rem;
   text-transform: uppercase;
-  padding-bottom: 1rem;
   font-weight: normal;
 }
 
@@ -327,6 +330,7 @@ a {
 .completed-project__navigation {
   display: flex;
   align-items: center;
+  margin-top: 33px;
 }
 
 .completed__project-arrow {
@@ -1084,10 +1088,14 @@ input:not([type=checkbox]) {
   margin-top: 51px;
 }
 .comments__header {
-  padding-bottom: 5rem;
+  padding-bottom: 49px;
+}
+.comments__header-name {
+  padding-top: 48px;
 }
 .comments__header-article {
   width: 27%;
+  margin-top: 16px;
 }
 .comments__wrapper {
   display: flex;
@@ -1136,15 +1144,18 @@ input:not([type=checkbox]) {
   right: 29px;
 }
 .comments__square {
-  padding: 12px 17px;
+  padding: 13px 26px;
   display: flex;
   align-items: center;
   margin: 0 auto;
-  width: 44%;
   justify-content: space-between;
 }
 .border {
   border-right: 1px #ffffff solid;
+}
+
+.comments__square-text {
+  padding-left: 13px;
 }
 
 /*# sourceMappingURL=style.css.map */

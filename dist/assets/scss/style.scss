@@ -125,7 +125,7 @@
             .header {
                 .header__menu {
                     @include flex(flex, space-between);
-                    padding: 1.5rem 6.25rem 1.375rem 5.3125rem;
+                    padding: 21px 100px 16px 85px;
                     background: $backgroundColor;
                     align-items: center;
                     .header__nav {
@@ -134,7 +134,7 @@
                             @include flex(flex, space-between);
                             .header-list__item {
                                 list-style: none;
-                                padding-right: 3.063em;
+                                padding-right: 49.008px;
                                 @include size-color(0.875em, #ffffff, "FuturaBookC");
                                 .header-list__link:hover {
                                     @include hoverLinkList();
@@ -154,7 +154,7 @@
                         align-items: center;
                         .header-contacts__telephone {
                             @extend .header-logo__text;
-                            padding-right: 2.625em;
+                            padding-right: 42px;
                         }
                         .header-contacts__button {
                             background: $main-color;
@@ -198,7 +198,7 @@
                         height: 44.1875rem;
                         background-size: cover;
                         &__content {
-                            padding: 12.125em 0 0 3.750em;
+                            padding: 194px 0 0 60px;
                             width: 49%;
                         }
                         &__heading {
@@ -210,17 +210,18 @@
                             }
                         }
                         &__text {
-                            margin-top: 2.125em;
-                            margin-bottom: 3.125em;
-                            @include size-color(1.375em, #ffffff, "FuturaBookC");
+                            margin-top: 12px;
+                            margin-bottom: 50px;
+                            @include size-color(22px, #ffffff, "FuturaBookC");
                             line-height: 1.875rem;
                             width: 72%;
                         }
                         &__button-left {
+                            width: 207px;
                             background-color: transparent;
-                            box-shadow: 0px 0.3125rem 0.9375rem rgba(227, 184, 115, 0.3);
+                            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
                             border-radius: 0.125rem;
-                            padding: 1.250em 2.531em;
+                            padding: 15px;
                             border-color: #ffffff;
                             text-transform: uppercase;
                             @include size-color(0.813em, #ffffff, "FuturaDemiC");
@@ -238,10 +239,12 @@
                         @include max-content;
                         background-color: inherit;
                         position: relative;
-                        top: 19.375rem;
-                        left: 6.1875rem;
+                        top: 353px;
+                        left: 84px;
                         &__text {
-                            @include size-color(1.188em, #ffffff, "Yeseva One");
+                            @include size-color(14px, #ffffff, Yeseva One);
+                            font-family: Yeseva One;
+                            line-height: 19px;
                             text-transform: uppercase;
                             padding-right: 1.125em;
                             &:hover {
@@ -249,7 +252,7 @@
                             }
                         }
                         &__down {
-                            padding: 2.0625rem 2.8125rem 2.875rem;
+                            padding: 33px 45px 46px;
                             @include flex(flex, center);
                             align-items: center;
                         }
@@ -265,7 +268,7 @@
             // completed__project completed-project
             .completed-project {
                 display: flex;
-                padding-top: 6.875rem;
+                padding-top: 109px;
                 background-color: $backgroundColor;
                 &__slider {
                     display: flex;
@@ -276,13 +279,14 @@
                 &__cities {
                     display: flex;
                     margin-bottom: 2.8125rem;
+                    margin-left: 16px;
                 }
                 &__info {
                     flex-direction: column;
                     display: flex;
                     width: 40%;
-                    padding-left: 6.25rem;
-                    margin-top: 3.625rem;
+                    padding-left: 100px;
+                    margin-top: 68px;
                 }
                 &__gallery {
                     display: flex;
@@ -309,7 +313,7 @@
                     @include size-color(1.125em, #ffffff, "FuturaBookC");
                     line-height: 1.8125rem;
                     width: 87%;
-                    padding: 2.25rem 0 3.5rem;
+                    padding: 20px 0 48px;
                 }
                 &__line {
                     position: relative;
@@ -326,10 +330,10 @@
                 &__row {
                     display: flex;
                     flex-direction: row;
-                    padding-bottom: 2rem;
+                    margin-bottom: 42px;
                 }
                 &__block {
-                    width: 37%;
+                    width: 39%;
                 }
                 &__article {
                     @include size-color(0.9375rem, #FFFFFF, "FuturaBookC");
@@ -340,7 +344,6 @@
                     @include size-color(1.125rem, $main-color, "Yeseva One");
                     line-height: 1.5625rem;
                     text-transform: uppercase;
-                    padding-bottom: 1rem;
                     font-weight: normal;
                 }
             }
@@ -361,7 +364,9 @@
             .completed-project__navigation {
                 display: flex;
                 align-items: center;
+                margin-top: 33px;
             }
+            
             
             .completed__project-arrow {
                 width: 2.5913rem;
@@ -1023,13 +1028,15 @@
 
 &__header{
     @extend .online-control__header;
-    padding-bottom: 5rem;
+    padding-bottom: 49px;
     &-name{
         @extend .types_of_repair__name;
+        padding-top:48px;
     }
     &-article{
         @extend  .types_of_repair__article-text;
         width: 27%;
+        margin-top: 16px;
     }
 }
 &__wrapper {
@@ -1075,11 +1082,10 @@
     right: 29px;
 }
 &__square {
-    padding: 12px 17px;
+    padding: 13px 26px;
     display: flex;
     align-items: center;
     margin: 0 auto;
-    width: 44%;
     justify-content: space-between;
 }
 &__logo{
@@ -1089,4 +1095,8 @@
 
 .border{
     border-right: 1px #ffffff solid;
+}
+
+.comments__square-text {
+    padding-left: 13px;
 }
