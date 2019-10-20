@@ -4,6 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
+    "modern-css-reset": "^1.0.4",
     "sass": "^1.22.12",
     "webpack": "^4.41.0"
   },
